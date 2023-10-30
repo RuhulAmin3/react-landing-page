@@ -75,6 +75,7 @@
 }
 
 // make animation
-@mixin animate($animation, $duration, $method, $times) {
+@mixin animate($animation, $duration, $method, $times, $animationDelay: null) {
   animation: $animation $duration $method $times;
+  animation-delay: $animationDelay;
 }
