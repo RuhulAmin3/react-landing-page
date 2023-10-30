@@ -1,5 +1,5 @@
-import React from "react";
 import Titlebar from "./ui/Titlebar";
+import ServiceCard from "./ui/ServiceCard";
 
 const Services = () => {
   return (
@@ -10,6 +10,12 @@ const Services = () => {
           <br />
           been the industrys standard dummy text ever since
         </Titlebar>
+        <div className="services__card-container">
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+        </div>
       </div>
     </section>
   );
