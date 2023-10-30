@@ -284,9 +284,9 @@ a {
   padding: var(--sectionPadding);
   .services__card-container {
     @include flex(center, space-between, $gap: 1rem, $wrap: wrap);
-
     // single service card design
     .services__card {
+      min-height: 400px;
       flex-basis: 100%;
       @include responsiveByBreakPoint(tablet) {
         flex-basis: 45%;
@@ -339,7 +339,7 @@ a {
         transition: all ease 0.5s;
       }
       .services__card-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         line-height: 34px;
         color: #111;
         letter-spacing: 0.6px;
@@ -363,6 +363,39 @@ a {
         font-size: 1.2rem;
         font-weight: 600;
         color: var(--primaryColor);
+      }
+      &:nth-child(2) {
+        &::before {
+          background-color: blue;
+        }
+        .services__card-icon {
+          background-color: rgba(0, 0, 255, 0.295);
+        }
+        &:hover .services__card-icon {
+          background-color: var(--whiteColor);
+        }
+      }
+      &:nth-child(3) {
+        &::before {
+          background-color: #00c3ff;
+        }
+        .services__card-icon {
+          background-color: rgba(0, 195, 255, 0.295);
+        }
+        &:hover .services__card-icon {
+          background-color: var(--whiteColor);
+        }
+      }
+      &:nth-child(4) {
+        &::before {
+          background-color: #ffc048;
+        }
+        .services__card-icon {
+          background-color: rgba(255, 191, 72, 0.295);
+        }
+        &:hover .services__card-icon {
+          background-color: var(--whiteColor);
+        }
       }
     }
   }
@@ -468,5 +501,60 @@ a {
         }
       }
     }
+  }
+}
+/* ======================== PORTFOLIO SECTION CSS STYLE ======================== */
+.portfolio {
+  padding: var(--sectionPadding) 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: var(--sectionPadding) 1rem;
+  }
+  .portfolio__titlebar {
+    text-align: center;
+    .portfolio__titlebar-text {
+      font-size: var(--largeFontSize);
+      font-weight: 700;
+      line-height: 3.15rem;
+      margin: 7px 0px;
+      color: var(--whiteColor);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .portfolio__titlebar-desc {
+      margin: 2rem 0;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 2rem;
+      color: var(--whiteColor);
+    }
+  }
+  .portfolio__bg {
+    background: var(--primaryColor);
+    padding: 120px 0 280px 0;
+  }
+  .portfolio__gallary {
+    margin-top: -14rem;
+    @include grid($columns: repeat(1, 1fr), $gap: 1rem);
+
+    @include responsiveByBreakPoint(tablet) {
+      @include grid($columns: repeat(3, 1fr), $gap: 1rem);
+    }
+
+    @include responsiveByBreakPoint(desktop) {
+      @include grid($columns: repeat(4, 1fr), $gap: 1rem);
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+  .portfolio__btn {
+    @extend .btn;
+    @include flex(center, space-between, $gap: 5px);
+    color: var(--whiteColor);
+    background: linear-gradient(to right, #4d36e5, #6c1be0);
+    font-size: 1rem;
+    margin-top: 8rem;
   }
 }
