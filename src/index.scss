@@ -11,6 +11,13 @@
   --primaryColor: #5a49f8;
   --topHeaderColor: #646464;
   --whiteColor: #ffffff;
+  --titleColor: #1d2124;
+  --textColor: #646464;
+  --baseFontSize: 1rem;
+  --mediumFontSize: 1.25rem;
+  --largeFontSize: 2.8rem;
+  --titleFontSize: 2.25rem;
+  --sectionPadding: 3.75rem;
 }
 
 /* ======================== CSS DEFAULT STYLE======================== */
@@ -47,10 +54,36 @@ h6 {
 .btn {
   font-weight: 500;
   border-radius: 6px;
-  padding: 12px 22px;
+  padding: 14px 22px;
   text-transform: capitalize;
   cursor: pointer;
   font-weight: 700;
+  border: none;
+}
+
+.titlebar {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  .titlebar__text {
+    font-size: var(--baseFontSize);
+    font-weight: 600;
+    color: var(--primaryColor);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .titlebar__title {
+    font-size: var(--largeFontSize);
+    font-weight: 700;
+    line-height: 3.15rem;
+    margin: 7px 0px;
+    color: var(--titleColor);
+  }
+  .titlebar__desc {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: var(--textColor);
+  }
 }
 
 /* ======================== NAVBAR CSS STYLE ======================== */
@@ -64,10 +97,10 @@ h6 {
   @include flex(center, space-between);
 }
 
-.navbar-list {
+.navbar__navbar-list {
   @include flex(center, space-between);
   list-style-type: none;
-  .navbar-list-Item {
+  .navbar__item {
     padding: 0 1.5rem;
     font-weight: 500;
     a {
@@ -80,14 +113,14 @@ h6 {
   }
 }
 
-.search-tab {
+.navbar__search-tab {
   @include flex(center, space-between, $gap: 10px);
   color: var(--whiteColor);
-  .search-icon {
+  .navbar__search-icon {
     font-weight: 700;
     font-size: 1.5rem;
   }
-  .quote-btn {
+  .navbar__quote-btn {
     @extend .btn;
     background: transparent;
     transition: all ease 0.3s;
@@ -102,26 +135,37 @@ h6 {
 
 /* ======================== HERO SECTION CSS STYLE ======================== */
 .hero-area {
-  background: var(--primaryColor);
+  background: linear-gradient(to right, #4d36e5, #6c1be0);
   color: var(--whiteColor);
-  height: calc(700 / 16) rem;
-  .hero-content-container {
-    @include flex(center, space-between, $gap: 1.5rem);
-    .hero-content {
+  height: 80vh;
+  @include responsiveByBreakPoint(phone) {
+    height: 100vh;
+  }
+  overflow: hidden;
+  .hero-area__container {
+    @include flex(center, space-between, $gap: 2.5rem);
+    @include responsiveByBreakPoint(phone) {
+      @include flex($direction: column, $gap: 1.25rem);
+    }
+    padding: 2rem 0;
+    .hero-area__content {
       width: 60%;
-      h2 {
-        font-size: 2.8rem;
+      @include flex($direction: column, $gap: 2rem);
+      .hero-area__text {
+        letter-spacing: 5px;
+        font-size: 18px;
+      }
+      .hero-area__title {
+        font-size: var(--largeFontSize);
         font-weight: 600;
         text-transform: capitalize;
         line-height: 4rem;
-        margin: 1rem 0;
       }
-      .hero-desc {
+      .hero-area__desc {
         @include typography(1rem, 400);
-        margin-bottom: 1.4rem;
         line-height: 1.8rem;
       }
-      .hero-btn {
+      .hero-area__btn {
         @extend .btn;
         background: transparent;
         transition: all ease 0.3s;
@@ -130,7 +174,7 @@ h6 {
         background-color: var(--whiteColor);
         color: black;
       }
-      .play-btn {
+      .hero-area__play-btn {
         @extend .btn;
         background: transparent;
         margin-left: 0.8rem;
@@ -143,7 +187,7 @@ h6 {
         }
       }
     }
-    .hero-img {
+    .hero-area__img {
       width: 40%;
       img {
         height: auto;
@@ -164,5 +208,75 @@ h6 {
         @include animate(movingImage, 5s, linear, infinite);
       }
     }
+  }
+}
+
+/* ======================== ABOUT US SECTION CSS STYLE ======================== */
+.about-us {
+  background: #f8f8ff;
+  padding: var(--sectionPadding) 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: var(--sectionPadding) 1rem;
+  }
+}
+
+.about-us__container {
+  @include flex(center, space-between, $gap: 1.25rem);
+  @include responsiveByBreakPoint(phone) {
+    @include flex($direction: column, $gap: 2rem);
+  }
+  .about-us__img {
+    width: 50%;
+    @include responsiveByBreakPoint(phone) {
+      width: 100%;
+    }
+  }
+  .about-us__img img {
+    width: 100%;
+  }
+
+  .about-us__content {
+    width: 50%;
+    @include responsiveByBreakPoint(phone) {
+      width: 100%;
+    }
+  }
+
+  .about-us__text {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--primaryColor);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .about-us__title {
+    font-size: var(--titleFontSize);
+    font-weight: 700;
+    line-height: 3rem;
+    margin: 0.62rem 0;
+    color: var(--titleColor);
+  }
+  .about-us__desc {
+    font-size: var(--baseFontSize);
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: var(--textColor);
+    margin: 1rem 0;
+  }
+  .about-us__btn {
+    @include flex(center, space-between, $gap: 5px);
+    @extend .btn;
+    color: var(--whiteColor);
+    background: linear-gradient(to right, #4d36e5, #6c1be0);
+    font-size: 1rem;
+  }
+}
+
+/* ======================== FEATURE/SERVICES SECTION CSS STYLE ======================== */
+
+.services {
+  background: #f9fbfe;
+  padding: var(--sectionPadding);
+  .services__container {
   }
 }

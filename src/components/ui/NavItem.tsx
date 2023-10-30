@@ -5,7 +5,7 @@ type NavItemProps = {
 
 const NavItem = ({ link, text }: NavItemProps) => {
   return (
-    <li className="navbar-list-Item">
+    <li className="navbar__item">
       <a href={link}>{text}</a>{" "}
     </li>
   );

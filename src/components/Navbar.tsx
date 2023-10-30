@@ -18,19 +18,19 @@ const Navbar = () => {
     <header className="container-full header">
       <nav className="container">
         <div className="navbar">
-          <div className="logo-container">
+          <div className="navbar__logo">
             <img src={logo} alt="logo" />
           </div>
-          <ul className="navbar-list">
+          <ul className="navbar__navbar-list">
             {navbarContent.map((content, idx) => (
               <NavItem key={idx} link={content.link} text={content.text} />
             ))}
           </ul>
-          <div className="search-tab">
-            <span className="search-icon">
+          <div className="navbar__search-tab">
+            <span className="navbar__search-icon">
               <BiSearchAlt2 />
             </span>
-            <Button className="quote-btn">Get a Quote</Button>
+            <Button className="navbar__quote-btn">Get a Quote</Button>
           </div>
         </div>
       </nav>
