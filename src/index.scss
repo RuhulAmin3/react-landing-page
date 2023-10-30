@@ -111,9 +111,24 @@ a {
     a {
       color: var(--whiteColor);
       text-decoration: none;
-      &:hover {
-        border-bottom: 1px solid var(--whiteColor);
+      position: relative;
+      width: fit-content;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 0;
+        background-color: var(--whiteColor);
+        bottom: -10px;
+        left: 0;
+        transition: all ease-in 0.2s;
       }
+      &:hover::before {
+        width: 100%;
+      }
+      // &:hover {
+      //   border-bottom: 1px solid var(--whiteColor);
+      // }
     }
   }
 }
@@ -510,6 +525,8 @@ a {
     padding: var(--sectionPadding) 1rem;
   }
   .portfolio__titlebar {
+    background: var(--primaryColor);
+    padding: 120px 0 280px 0;
     text-align: center;
     .portfolio__titlebar-text {
       font-size: var(--largeFontSize);
@@ -521,40 +538,57 @@ a {
       letter-spacing: 2px;
     }
     .portfolio__titlebar-desc {
-      margin: 2rem 0;
+      margin: 2rem auto;
       font-size: 1rem;
       font-weight: 400;
       line-height: 2rem;
       color: var(--whiteColor);
+      width: 100%;
+      @include responsiveByBreakPoint(tablet) {
+        width: 50%;
+      }
     }
   }
-  .portfolio__bg {
-    background: var(--primaryColor);
-    padding: 120px 0 280px 0;
-  }
+}
+.portfolio__container {
+  padding-bottom: var(--sectionPadding);
   .portfolio__gallary {
-    margin-top: -14rem;
-    @include grid($columns: repeat(1, 1fr), $gap: 1rem);
+    margin-top: -20rem;
+    @include grid($columns: repeat(1, 1fr), $gap: 1.4rem);
 
     @include responsiveByBreakPoint(tablet) {
-      @include grid($columns: repeat(3, 1fr), $gap: 1rem);
+      @include grid($columns: repeat(3, 1fr), $gap: 1.4rem);
     }
 
     @include responsiveByBreakPoint(desktop) {
-      @include grid($columns: repeat(4, 1fr), $gap: 1rem);
+      @include grid($columns: repeat(4, 1fr), $gap: 1.4rem);
     }
-    img {
+
+    .portfolio__img {
       height: 100%;
       width: 100%;
       border-radius: 5px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 120%;
+        width: 120%;
+        border: 5px solid violet;
+        background: var(--whiteColor);
+        top: 0;
+        left: 0;
+        opacity: 1;
+      }
     }
   }
+
   .portfolio__btn {
     @extend .btn;
     @include flex(center, space-between, $gap: 5px);
     color: var(--whiteColor);
     background: linear-gradient(to right, #4d36e5, #6c1be0);
     font-size: 1rem;
-    margin-top: 8rem;
+    margin: 3rem auto 0px auto;
   }
 }
