@@ -2,6 +2,7 @@ import portfolioImg from "../assets/images/02_Portfolio-520x562.jpg";
 import portfolioImg2 from "../assets/images/03_Portfolio-520x562.jpg";
 import portfolioImg3 from "../assets/images/04_Portfolio-520x562.jpg";
 import portfolioImg4 from "../assets/images/05_Portfolio-520x562.jpg";
+
 // team member images
 import teamImg1 from "../assets/images/team1.jpg";
 import teamImg2 from "../assets/images/team3.jpg";

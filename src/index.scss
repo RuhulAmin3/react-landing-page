@@ -17,6 +17,8 @@ $mediumFontSize: 1.25rem;
 $largeFontSize: 2.8rem;
 $titleFontSize: 2.25rem;
 $sectionPadding: 3.75rem;
+$mobileSectionPadding: 1.2rem;
+$mobileFontSize: 1.6rem;
 
 /* ======================== CSS DEFAULT STYLE======================== */
 
@@ -36,6 +38,7 @@ h5,
 h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
+  margin: 0;
 }
 
 .container {
@@ -84,6 +87,10 @@ a {
     line-height: 3.15rem;
     margin: 7px 0px;
     color: $titleColor;
+    @include responsiveByBreakPoint(phone) {
+      font-size: $mobileFontSize;
+      line-height: 2rem;
+    }
   }
   .titlebar__desc {
     font-size: 1rem;
@@ -234,6 +241,9 @@ a {
 .about-us {
   background: rgb(248, 248, 255);
   padding: $sectionPadding 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: $mobileSectionPadding 0px;
+  }
 }
 
 .about-us__container {
@@ -266,11 +276,15 @@ a {
     letter-spacing: 2px;
   }
   .about-us__title {
-    font-size: $titleFontSize;
+    font-size: $largeFontSize;
     font-weight: 700;
     line-height: 3rem;
     margin: 0.62rem 0;
     color: $titleColor;
+    @include responsiveByBreakPoint(phone) {
+      font-size: $mobileFontSize;
+      line-height: 2rem;
+    }
   }
   .about-us__desc {
     font-size: $baseFontSize;
@@ -293,6 +307,9 @@ a {
 .services {
   background: rgb(249, 251, 254);
   padding: $sectionPadding 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: $mobileSectionPadding 0px;
+  }
   .services__card-container {
     @include flex(center, space-between, $gap: 1rem, $wrap: wrap);
     // single service card design
@@ -415,6 +432,9 @@ a {
 /* ======================== TEAM SECTION CSS STYLE ======================== */
 .team {
   padding: $sectionPadding 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: $mobileSectionPadding 0px;
+  }
   .team__wrapper {
     @include flex(
       $alignItems: center,
@@ -423,7 +443,7 @@ a {
       $wrap: wrap
     );
     @include responsiveByBreakPoint(phone) {
-      @include flex($direction: column);
+      @include flex($direction: column, $gap: 1.5rem);
     }
     .team__card {
       position: relative;
@@ -518,7 +538,7 @@ a {
 .portfolio {
   padding: $sectionPadding 0px;
   @include responsiveByBreakPoint(phone) {
-    padding: $sectionPadding 1rem;
+    padding: $mobileSectionPadding 0px;
   }
   .portfolio__titlebar {
     background: $primaryColor;
@@ -532,6 +552,10 @@ a {
       color: $whiteColor;
       text-transform: uppercase;
       letter-spacing: 2px;
+      @include responsiveByBreakPoint(phone) {
+        font-size: $mobileFontSize;
+        line-height: 1.2rem;
+      }
     }
     .portfolio__titlebar-desc {
       margin: 2rem auto;
@@ -654,6 +678,9 @@ a {
 /* ======================== TESTIMONIAL SECTION CSS STYLE ======================== */
 .testimonial {
   padding: $sectionPadding 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: $mobileSectionPadding 0px;
+  }
   .testimonial__container {
     position: relative;
     .testimonial__slider-container {
@@ -664,6 +691,14 @@ a {
         .testimonial__slider-content {
           position: relative;
           @include flex($alignItems: center, $justifyContent: space-between);
+          @include responsiveByBreakPoint(phone) {
+            @include flex(
+              $alignItems: flex-start,
+              $justifyContent: space-between,
+              $direction: column,
+              $gap: 10px
+            );
+          }
           margin-bottom: 1.5rem;
           .testimonial__slider-user {
             @include flex($alignItems: center, $gap: 0.7rem);
@@ -678,11 +713,18 @@ a {
           .testimonial__slider-star {
             @include flex($alignItems: center, $gap: 5px);
             color: orange;
+            @include responsiveByBreakPoint(phone) {
+              margin-left: 5rem;
+            }
           }
         }
         .testimonial__slider-review {
           color: $textColor;
           line-height: 2rem;
+        }
+
+        @include responsiveByBreakPoint(phone) {
+          padding: 1.75rem 1rem;
         }
       }
     }
@@ -723,6 +765,9 @@ a {
 .contact-us {
   background: rgb(248, 248, 255);
   padding: $sectionPadding 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: $mobileSectionPadding 0px;
+  }
 }
 
 .contact-us__container {
@@ -801,6 +846,9 @@ a {
 
 .trusted-by {
   padding: $sectionPadding 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: $mobileSectionPadding 0px;
+  }
   .trusted-by__container {
     .trusted-by__content {
       @include grid(
@@ -826,6 +874,10 @@ a {
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
           border-radius: 5px;
         }
+        @include responsiveByBreakPoint(phone) {
+          width: 80%;
+          margin: 0 auto;
+        }
       }
     }
   }
@@ -837,6 +889,9 @@ a {
 .footer {
   background: rgb(248, 248, 255);
   padding: $sectionPadding 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: $mobileSectionPadding 0px;
+  }
 
   .footer__content {
     @include grid($columns: repeat(1, 1fr), $gap: 1rem);
@@ -855,6 +910,9 @@ a {
       margin-bottom: 25px;
     }
     .footer__social-link {
+      @include responsiveByBreakPoint(phone) {
+        text-align: center;
+      }
       img {
         margin-bottom: 1rem;
       }
@@ -866,6 +924,9 @@ a {
       }
       ul {
         @include flex($alignItems: center, $gap: 2rem);
+        @include responsiveByBreakPoint(phone) {
+          @include flex($justifyContent: center);
+        }
         li a {
           color: $textColor;
           font-size: 1.5rem;
@@ -878,11 +939,17 @@ a {
     }
     .footer__services,
     .footer__important-link {
+      @include responsiveByBreakPoint(phone) {
+        text-align: center;
+      }
       li {
         margin-bottom: 1.4rem;
         transition: all ease-in-out 0.2s;
         a {
           @include flex($alignItems: center, $gap: 0.5rem);
+          @include responsiveByBreakPoint(phone) {
+            @include flex($justifyContent: center);
+          }
           color: $textColor;
         }
         &:hover a {
@@ -891,6 +958,9 @@ a {
       }
     }
     .footer__contact-info {
+      @include responsiveByBreakPoint(phone) {
+        text-align: center;
+      }
       p {
         margin-bottom: 20px;
         font-size: 1rem;
@@ -899,6 +969,10 @@ a {
       }
       li {
         @include flex($alignItems: center, $gap: 0.5rem);
+        @include responsiveByBreakPoint(phone) {
+          text-align: center;
+          @include flex($justifyContent: center);
+        }
         margin-bottom: 1rem;
         color: $textColor;
         span {
@@ -914,4 +988,8 @@ a {
   padding: 3rem 0;
   color: $textColor;
   text-align: center;
+  @include responsiveByBreakPoint(phone) {
+    padding-inline: 3rem;
+    line-height: 1.5rem;
+  }
 }

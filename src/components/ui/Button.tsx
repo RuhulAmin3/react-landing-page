@@ -4,10 +4,12 @@ type ButtonType = {
   type?: string;
 };
 const Button = ({ children, className, type = "button" }: ButtonType) => {
-  return (
-    <button type={type} className={className}>
+  return type ? (
+    <button type="submit" className={className}>
       {children}
     </button>
+  ) : (
+    <button className={className}>{children}</button>
   );
 };
 

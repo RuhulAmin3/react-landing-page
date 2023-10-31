@@ -1,8 +1,7 @@
 import logo from "../assets/images/logo.png";
 import { FaFacebook, FaMapMarkedAlt } from "react-icons/fa";
-import { BsTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import { BiRightArrow } from "react-icons/bi";
+import { BiRightArrow, BiSolidPhone } from "react-icons/bi";
 import {
   AiFillTwitterCircle,
   AiFillInstagram,
@@ -122,7 +121,7 @@ const Footer = () => {
                 <li>
                   {" "}
                   <span>
-                    <BsTelephoneFill />
+                    <BiSolidPhone />
                   </span>
                   +880-174-686-1700
                 </li>
