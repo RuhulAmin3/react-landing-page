@@ -1,7 +1,6 @@
 # Starting with Diceco-Agency-Website
 
 [DigecoAgency](https://digeco-landing-page.netlify.app/)
-(https://ibb.co/LPsQBK9)
 
 ### Overview
 
