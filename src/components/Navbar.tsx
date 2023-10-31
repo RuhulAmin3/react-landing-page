@@ -20,6 +20,9 @@ const Navbar = () => {
       navbar?.classList.remove("sticky");
     }
   };
+  const handleToggle = () => {
+    setOpen(!open);
+  };
   return (
     <header className="container-full header" id="header">
       <nav className="container">
@@ -35,7 +38,12 @@ const Navbar = () => {
             }`}
           >
             {navbarContent.map((content, idx) => (
-              <NavItem key={idx} link={content.link} text={content.text} />
+              <NavItem
+                handleToggle={handleToggle}
+                key={idx}
+                link={content.link}
+                text={content.text}
+              />
             ))}
           </ul>
           <div className="navbar__search-tab">
@@ -44,7 +52,7 @@ const Navbar = () => {
             </span>
             <Button className="navbar__quote-btn">Get a Quote</Button>
           </div>
-          <span className="navbar__hambarger" onClick={() => setOpen(!open)}>
+          <span className="navbar__hambarger" onClick={handleToggle}>
             {open ? <RxCross1 /> : <RxHamburgerMenu />}
           </span>
         </div>

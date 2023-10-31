@@ -1,27 +1,28 @@
-# React + TypeScript + Vite
+# Starting with Bookshop Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Bookshop](https://bookshop-studio.vercel.app/)
+(https://i.ibb.co/k1HYCkr/bookshop-studio.png)
 
-Currently, two official plugins are available:
+### Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In this project, we aim to create a contemporary e-commerce website with a focus on performance, maintainability, and a sleek user interface. To achieve this, we will leverage the Mantine UI component library for our front-end design and Sass for styling. All our API calls will be implemented using Redux Toolkit Query (RTK Query), and the website will follow server-side rendering (SSR) principles for optimal SEO and user experience.
 
-## Expanding the ESLint configuration
+### Key Objectives:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Homepage Design: We will design an engaging and user-friendly homepage using Mantine UI components. This will include features like product carousels, navigation menus, and product categories, all seamlessly integrated into a visually appealing layout.
 
-- Configure the top-level `parserOptions` property like this:
+2. Product Details Page: The product details page will provide in-depth information about each product. We'll leverage Mantine UI for components like product images, descriptions, and interactive elements. Users will have the ability to view and purchase products with ease.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+3. API Integration: All data retrieval and management will be handled through RTK Query, ensuring efficient API calls and a smooth user experience. This includes fetching product details, user profiles, and any other necessary data.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+4. Folder Structure: We'll maintain a well-structured project folder hierarchy to keep our codebase organized and easily maintainable. Components, Redux slices, styles, and utility functions will be neatly organized.
+
+5. Server-Side Rendering: The website will utilize server-side rendering for faster initial page loads, improved SEO, and optimal user experience. This will be achieved using libraries like Next.js or a similar SSR framework
+
+### Technology Stack:
+
+- Frontend library: React
+- UI Component Library: Mantine UI
+- Styling: Sass
+- State Management: Redux Toolkit with RTK Query
+- Server-Side Rendering: Next.js
