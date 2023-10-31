@@ -165,7 +165,8 @@ a {
   color: $whiteColor;
   height: 80vh;
   @include responsiveByBreakPoint(phone) {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
   }
   overflow: hidden;
   .hero-area__container {
@@ -176,6 +177,10 @@ a {
     padding: 2rem 0;
     .hero-area__content {
       width: 60%;
+      @include responsiveByBreakPoint(phone) {
+        padding: 1rem;
+        width: 100%;
+      }
       @include flex($direction: column, $gap: 2rem);
       .hero-area__text {
         letter-spacing: 5px;
@@ -186,6 +191,9 @@ a {
         font-weight: 600;
         text-transform: capitalize;
         line-height: 4rem;
+        @include responsiveByBreakPoint(phone) {
+          font-size: 2.5rem;
+        }
       }
       .hero-area__desc {
         @include typography(1rem, 400);
@@ -215,9 +223,16 @@ a {
     }
     .hero-area__img {
       width: 40%;
+      @include responsiveByBreakPoint(phone) {
+        width: 100%;
+      }
       img {
         height: auto;
         width: auto;
+        @include responsiveByBreakPoint(phone) {
+          height: 100%;
+          width: 100%;
+        }
 
         //add hero section image animation
         @include keyframes(movingImage) {
@@ -311,17 +326,17 @@ a {
     padding: $mobileSectionPadding 0px;
   }
   .services__card-container {
-    @include flex(center, space-between, $gap: 1rem, $wrap: wrap);
+    @include grid($columns: repeat(1, 1fr), $gap: 1rem);
     // single service card design
+    @include responsiveByBreakPoint(tablet) {
+      @include grid($columns: repeat(2, 1fr), $gap: 1rem);
+    }
+    @include responsiveByBreakPoint(desktop) {
+      @include grid($columns: repeat(4, 1fr), $gap: 1rem);
+    }
     .services__card {
       min-height: 400px;
-      flex-basis: 100%;
-      @include responsiveByBreakPoint(tablet) {
-        flex-basis: 45%;
-      }
-      @include responsiveByBreakPoint(desktop) {
-        flex-basis: 23.5%;
-      }
+
       text-align: center;
       padding: 45px 35px;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -367,7 +382,7 @@ a {
         transition: all ease 0.5s;
       }
       .services__card-title {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         line-height: 34px;
         color: #111;
         letter-spacing: 0.6px;
@@ -436,24 +451,22 @@ a {
     padding: $mobileSectionPadding 0px;
   }
   .team__wrapper {
-    @include flex(
-      $alignItems: center,
-      $justifyContent: space-around,
-      $gap: 0.5rem,
-      $wrap: wrap
-    );
-    @include responsiveByBreakPoint(phone) {
-      @include flex($direction: column, $gap: 1.5rem);
+    @include grid($columns: repeat(1, 1fr), $gap: 1rem);
+    @include responsiveByBreakPoint(tablet) {
+      @include grid($columns: repeat(2, 1fr), $gap: 1rem);
+    }
+    @include responsiveByBreakPoint(desktop) {
+      @include grid($columns: repeat(4, 1fr), $gap: 1rem);
     }
     .team__card {
       position: relative;
-      flex-basis: 100%;
-      @include responsiveByBreakPoint(tablet) {
-        flex-basis: 45%;
-      }
-      @include responsiveByBreakPoint(desktop) {
-        flex-basis: 30%;
-      }
+      // flex-basis: 100%;
+      // @include responsiveByBreakPoint(tablet) {
+      //   flex-basis: 45%;
+      // }
+      // @include responsiveByBreakPoint(desktop) {
+      //   flex-basis: 30%;
+      // }
       img {
         border-radius: 5px;
         margin-bottom: 15px;
@@ -463,7 +476,13 @@ a {
       .team__overlay {
         position: absolute;
         width: 100%;
-        height: 84%;
+        height: 85%;
+        @include responsiveByBreakPoint(tablet) {
+          height: 85%;
+        }
+        @include responsiveByBreakPoint(desktop) {
+          height: 81%;
+        }
         background: $primaryColor;
         top: 0;
         right: 0;
@@ -578,7 +597,7 @@ a {
     @include grid($columns: repeat(1, 1fr), $gap: 1.4rem);
 
     @include responsiveByBreakPoint(tablet) {
-      @include grid($columns: repeat(3, 1fr), $gap: 1.4rem);
+      @include grid($columns: repeat(2, 1fr), $gap: 1.4rem);
     }
 
     @include responsiveByBreakPoint(desktop) {
