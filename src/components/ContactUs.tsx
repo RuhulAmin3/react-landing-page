@@ -15,11 +15,11 @@ const ContactUs = () => {
               <input type="text" placeholder="First Name" />
               <input type="text" placeholder="Last Name" />
             </div>
-            <input type="email" placeholder="email address" />
+            <input type="email" placeholder="Email address" />
             <textarea
               name="message"
               id="textarea"
-              placeholder="write your message"
+              placeholder="Write your message"
               cols={30}
               rows={5}
             />

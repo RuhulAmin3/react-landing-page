@@ -6,6 +6,8 @@ import Team from "../components/Team";
 import Testimonial from "../components/Testimonial";
 import Portfolio from "../components/Portfolio";
 import ContactUs from "../components/ContactUs";
+import TrustedBySection from "../components/TrustedBySection";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -18,6 +20,8 @@ const Home = () => {
       <Portfolio />
       <Testimonial />
       <ContactUs />
+      <TrustedBySection />
+      <Footer />
     </>
   );
 };

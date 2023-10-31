@@ -1,14 +1,24 @@
-import teamImg1 from "../../assets/images/team1.jpg";
 import { FaFacebook } from "react-icons/fa";
 import {
   AiFillTwitterCircle,
   AiFillInstagram,
   AiFillLinkedin,
 } from "react-icons/ai";
-const TeamCard = () => {
+
+type ContentType = {
+  image: string;
+  name: string;
+  designation: string;
+};
+
+type PropsType = {
+  content: ContentType;
+};
+
+const TeamCard = ({ content }: PropsType) => {
   return (
     <div className="team__card">
-      <img src={teamImg1} alt="team member" />
+      <img src={content.image} alt="team member" />
       <div className="team__overlay">
         <ul>
           <li>
@@ -34,8 +44,8 @@ const TeamCard = () => {
         </ul>
       </div>
       <div className="team__identity">
-        <h2>Michael Jackson</h2>
-        <p>UI / Ux Designer</p>
+        <h2>{content.name}</h2>
+        <p>{content.designation}</p>
       </div>
     </div>
   );

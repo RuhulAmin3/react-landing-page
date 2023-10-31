@@ -48,10 +48,13 @@ h6 {
 .container-full {
   width: 100%;
 }
-
+li {
+  list-style-type: none;
+}
 a {
   text-decoration: none;
   cursor: pointer;
+  color: inherit;
 }
 
 /* ======================== COMMON COMPONENT CSS STYLE ======================== */
@@ -792,4 +795,123 @@ a {
       }
     }
   }
+}
+
+/* ======================== TRUSTED-BY SECTION CSS STYLE ======================== */
+
+.trusted-by {
+  padding: $sectionPadding 0px;
+  .trusted-by__container {
+    .trusted-by__content {
+      @include grid(
+        $columns: repeat(1, 1fr),
+        $alignItems: center,
+        $justifyContent: center,
+        $gap: 2.5rem
+      );
+      @include responsiveByBreakPoint(tablet) {
+        @include grid($columns: repeat(2, 1fr), $gap: 1rem);
+      }
+      @include responsiveByBreakPoint(desktop) {
+        @include grid($columns: repeat(4, 1fr), $gap: 1rem);
+      }
+      img {
+        filter: grayscale(1);
+        transition: all ease-in-out 0.2s;
+        width: 100%;
+        padding: 1rem;
+        cursor: pointer;
+        &:hover {
+          filter: grayscale(0);
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+/* ======================== FOOTER SECTION CSS STYLE ======================== 
+*/
+
+.footer {
+  background: rgb(248, 248, 255);
+  padding: $sectionPadding 0px;
+
+  .footer__content {
+    @include grid($columns: repeat(1, 1fr), $gap: 1rem);
+    margin: 0 auto;
+    @include responsiveByBreakPoint(tablet) {
+      @include grid($columns: repeat(2, 1fr), $gap: 1rem);
+    }
+    @include responsiveByBreakPoint(desktop) {
+      @include grid($columns: repeat(4, 1fr), $gap: 1rem);
+    }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 34px;
+      color: $titleColor;
+      margin-bottom: 25px;
+    }
+    .footer__social-link {
+      img {
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 20px;
+        font-size: 1rem;
+        line-height: 30px;
+        color: $textColor;
+      }
+      ul {
+        @include flex($alignItems: center, $gap: 2rem);
+        li a {
+          color: $textColor;
+          font-size: 1.5rem;
+          transition: all ease-in-out 0.2s;
+          &:hover {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+    .footer__services,
+    .footer__important-link {
+      li {
+        margin-bottom: 1.4rem;
+        transition: all ease-in-out 0.2s;
+        a {
+          @include flex($alignItems: center, $gap: 0.5rem);
+          color: $textColor;
+        }
+        &:hover a {
+          color: $primaryColor;
+        }
+      }
+    }
+    .footer__contact-info {
+      p {
+        margin-bottom: 20px;
+        font-size: 1rem;
+        line-height: 30px;
+        color: $textColor;
+      }
+      li {
+        @include flex($alignItems: center, $gap: 0.5rem);
+        margin-bottom: 1rem;
+        color: $textColor;
+        span {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}
+
+.footer__finish-line {
+  background-color: $whiteColor;
+  padding: 3rem 0;
+  color: $textColor;
+  text-align: center;
 }
