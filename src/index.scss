@@ -119,10 +119,46 @@ a {
 
 .navbar {
   @include flex(center, space-between);
+  .navbar__logo {
+    @include responsiveByBreakPoint(phone) {
+      width: 40%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .navbar__hambarger {
+    font-size: 25px;
+    cursor: pointer;
+    display: block;
+    color: $whiteColor;
+
+    @include responsiveByBreakPoint(desktop) {
+      display: none;
+    }
+  }
 }
 
 .navbar__navbar-list {
-  @include flex(center, space-between);
+  visibility: hidden;
+  position: absolute;
+  @include flex($direction: column, $gap: 0.8rem);
+  background: $primaryColor;
+  padding-block: 15px;
+  top: 72px;
+  left: 0px;
+  text-align: left;
+  align-items: flex-start;
+  width: 100%;
+  font-size: 1rem;
+  @include responsiveByBreakPoint(tablet) {
+    top: 95px;
+  }
+  @include responsiveByBreakPoint(desktop) {
+    visibility: visible;
+    position: static;
+    @include flex(center, center, $gap: 0, $direction: row);
+  }
   list-style-type: none;
   .navbar__item {
     padding: 0 1rem;
@@ -149,8 +185,22 @@ a {
   }
 }
 
+.navbar__mobile-nav {
+  @include responsiveByBreakPoint(phone) {
+    visibility: visible;
+  }
+
+  @include responsiveByBreakPoint(tablet) {
+    visibility: visible;
+  }
+}
+
 .navbar__search-tab {
-  @include flex(center, space-between, $gap: 10px);
+  display: none;
+  @include responsiveByBreakPoint(desktop) {
+    display: block;
+    @include flex(center, space-between, $gap: 10px);
+  }
   color: $whiteColor;
   .navbar__search-icon {
     font-weight: 700;
@@ -158,6 +208,7 @@ a {
   }
   .navbar__quote-btn {
     @extend .btn;
+    white-space: nowrap;
     background: transparent;
     transition: all ease 0.3s;
     color: $whiteColor;
@@ -189,6 +240,7 @@ a {
     .hero-area__content {
       width: 60%;
       @include responsiveByBreakPoint(phone) {
+        order: 2;
         padding: 1rem;
         width: 100%;
       }
@@ -236,6 +288,7 @@ a {
       width: 40%;
       @include responsiveByBreakPoint(phone) {
         width: 100%;
+        order: 1;
       }
       img {
         height: auto;

@@ -1,18 +1,14 @@
 import NavItem from "./ui/NavItem";
 import logo from "../assets/images/logo2.png";
 import { BiSearchAlt2 } from "react-icons/bi";
+import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import Button from "./ui/Button";
-import { useEffect } from "react";
-const Navbar = () => {
-  const navbarContent = [
-    { link: "#", text: "Home" },
-    { link: "#", text: "About Us" },
-    { link: "#", text: "Services" },
-    { link: "#", text: "Team" },
-    { link: "#", text: "Portfolio" },
-    { link: "#", text: "Testimonial" },
-  ];
 
+import { navbarContent } from "../constant";
+import { useState } from "react";
+
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
   window.onscroll = () => {
     const navbar = document.getElementById("header");
     if (window.scrollY > 50) {
@@ -30,7 +26,11 @@ const Navbar = () => {
           <div className="navbar__logo">
             <img src={logo} alt="logo" />
           </div>
-          <ul className="navbar__navbar-list">
+          <ul
+            className={`navbar__navbar-list ${
+              open ? "navbar__mobile-nav" : ""
+            }`}
+          >
             {navbarContent.map((content, idx) => (
               <NavItem key={idx} link={content.link} text={content.text} />
             ))}
@@ -41,6 +41,9 @@ const Navbar = () => {
             </span>
             <Button className="navbar__quote-btn">Get a Quote</Button>
           </div>
+          <span className="navbar__hambarger" onClick={() => setOpen(!open)}>
+            {open ? <RxCross1 /> : <RxHamburgerMenu />}
+          </span>
         </div>
       </nav>
     </header>

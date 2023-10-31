@@ -80,3 +80,13 @@ export const teamContent = [
     image: teamImg4,
   },
 ];
+
+export const navbarContent = [
+  { link: "#", text: "Home" },
+  { link: "#", text: "About Us" },
+  { link: "#", text: "Services" },
+  { link: "#", text: "Team" },
+  { link: "#", text: "Portfolio" },
+  { link: "#", text: "Testimonial" },
+  { link: "#", text: "Contact Us" },
+];
