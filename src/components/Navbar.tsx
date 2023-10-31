@@ -2,6 +2,7 @@ import NavItem from "./ui/NavItem";
 import logo from "../assets/images/logo2.png";
 import { BiSearchAlt2 } from "react-icons/bi";
 import Button from "./ui/Button";
+import { useEffect } from "react";
 const Navbar = () => {
   const navbarContent = [
     { link: "#", text: "Home" },
@@ -10,12 +11,20 @@ const Navbar = () => {
     { link: "#", text: "Team" },
     { link: "#", text: "Portfolio" },
     { link: "#", text: "Testimonial" },
-    { link: "#", text: "News" },
-    { link: "#", text: "Blog" },
   ];
 
+  window.onscroll = () => {
+    const navbar = document.getElementById("header");
+    if (window.scrollY > 50) {
+      // add class
+      navbar?.classList.add("sticky");
+    } else {
+      // remove class
+      navbar?.classList.remove("sticky");
+    }
+  };
   return (
-    <header className="container-full header">
+    <header className="container-full header" id="header">
       <nav className="container">
         <div className="navbar">
           <div className="navbar__logo">
