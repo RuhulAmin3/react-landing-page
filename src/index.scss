@@ -7,18 +7,16 @@
   box-sizing: border-box;
 }
 
-:root {
-  --primaryColor: #5a49f8;
-  --topHeaderColor: #646464;
-  --whiteColor: #ffffff;
-  --titleColor: #1d2124;
-  --textColor: #646464;
-  --baseFontSize: 1rem;
-  --mediumFontSize: 1.25rem;
-  --largeFontSize: 2.8rem;
-  --titleFontSize: 2.25rem;
-  --sectionPadding: 3.75rem;
-}
+$primaryColor: #5a49f8;
+$topHeaderColor: #646464;
+$whiteColor: #ffffff;
+$titleColor: #1d2124;
+$textColor: #646464;
+$baseFontSize: 1rem;
+$mediumFontSize: 1.25rem;
+$largeFontSize: 2.8rem;
+$titleFontSize: 2.25rem;
+$sectionPadding: 3.75rem;
 
 /* ======================== CSS DEFAULT STYLE======================== */
 
@@ -44,6 +42,7 @@ h6 {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .container-full {
@@ -70,31 +69,31 @@ a {
   text-align: center;
   margin-bottom: 2rem;
   .titlebar__text {
-    font-size: var(--baseFontSize);
+    font-size: $baseFontSize;
     font-weight: 600;
-    color: var(--primaryColor);
+    color: $primaryColor;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
   .titlebar__title {
-    font-size: var(--largeFontSize);
+    font-size: $largeFontSize;
     font-weight: 700;
     line-height: 3.15rem;
     margin: 7px 0px;
-    color: var(--titleColor);
+    color: $titleColor;
   }
   .titlebar__desc {
     font-size: 1rem;
     font-weight: 400;
     line-height: 2rem;
-    color: var(--textColor);
+    color: $textColor;
   }
 }
 
 /* ======================== NAVBAR CSS STYLE ======================== */
 
 .header {
-  background: var(--primaryColor);
+  background: $primaryColor;
   padding: 10px 0px;
 }
 
@@ -106,10 +105,10 @@ a {
   @include flex(center, space-between);
   list-style-type: none;
   .navbar__item {
-    padding: 0 1.5rem;
+    padding: 0 1.4rem;
     font-weight: 500;
     a {
-      color: var(--whiteColor);
+      color: $whiteColor;
       text-decoration: none;
       position: relative;
       width: fit-content;
@@ -118,7 +117,7 @@ a {
         position: absolute;
         height: 1px;
         width: 0;
-        background-color: var(--whiteColor);
+        background-color: $whiteColor;
         bottom: -10px;
         left: 0;
         transition: all ease-in 0.2s;
@@ -126,16 +125,13 @@ a {
       &:hover::before {
         width: 100%;
       }
-      // &:hover {
-      //   border-bottom: 1px solid var(--whiteColor);
-      // }
     }
   }
 }
 
 .navbar__search-tab {
   @include flex(center, space-between, $gap: 10px);
-  color: var(--whiteColor);
+  color: $whiteColor;
   .navbar__search-icon {
     font-weight: 700;
     font-size: 1.5rem;
@@ -144,10 +140,10 @@ a {
     @extend .btn;
     background: transparent;
     transition: all ease 0.3s;
-    color: var(--whiteColor);
-    border: 3px solid var(--whiteColor);
+    color: $whiteColor;
+    border: 3px solid $whiteColor;
     &:hover {
-      background-color: var(--whiteColor);
+      background-color: $whiteColor;
       color: black;
     }
   }
@@ -156,7 +152,7 @@ a {
 /* ======================== HERO SECTION CSS STYLE ======================== */
 .hero-area {
   background: linear-gradient(to right, #4d36e5, #6c1be0);
-  color: var(--whiteColor);
+  color: $whiteColor;
   height: 80vh;
   @include responsiveByBreakPoint(phone) {
     height: 100vh;
@@ -176,7 +172,7 @@ a {
         font-size: 18px;
       }
       .hero-area__title {
-        font-size: var(--largeFontSize);
+        font-size: $largeFontSize;
         font-weight: 600;
         text-transform: capitalize;
         line-height: 4rem;
@@ -189,9 +185,9 @@ a {
         @extend .btn;
         background: transparent;
         transition: all ease 0.3s;
-        color: var(--whiteColor);
-        border: 3px solid var(--whiteColor);
-        background-color: var(--whiteColor);
+        color: $whiteColor;
+        border: 3px solid $whiteColor;
+        background-color: $whiteColor;
         color: black;
       }
       .hero-area__play-btn {
@@ -199,10 +195,10 @@ a {
         background: transparent;
         margin-left: 0.8rem;
         transition: all ease 0.3s;
-        color: var(--whiteColor);
-        border: 3px solid var(--whiteColor);
+        color: $whiteColor;
+        border: 3px solid $whiteColor;
         &:hover {
-          background-color: var(--whiteColor);
+          background-color: $whiteColor;
           color: black;
         }
       }
@@ -234,10 +230,7 @@ a {
 /* ======================== ABOUT US SECTION CSS STYLE ======================== */
 .about-us {
   background: rgb(248, 248, 255);
-  padding: var(--sectionPadding) 0px;
-  @include responsiveByBreakPoint(phone) {
-    padding: var(--sectionPadding) 1rem;
-  }
+  padding: $sectionPadding 0px;
 }
 
 .about-us__container {
@@ -265,28 +258,28 @@ a {
   .about-us__text {
     font-size: 15px;
     font-weight: 600;
-    color: var(--primaryColor);
+    color: $primaryColor;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
   .about-us__title {
-    font-size: var(--titleFontSize);
+    font-size: $titleFontSize;
     font-weight: 700;
     line-height: 3rem;
     margin: 0.62rem 0;
-    color: var(--titleColor);
+    color: $titleColor;
   }
   .about-us__desc {
-    font-size: var(--baseFontSize);
+    font-size: $baseFontSize;
     font-weight: 400;
     line-height: 1.8rem;
-    color: var(--textColor);
+    color: $textColor;
     margin: 1rem 0;
   }
   .about-us__btn {
     @include flex(center, space-between, $gap: 5px);
     @extend .btn;
-    color: var(--whiteColor);
+    color: $whiteColor;
     background: linear-gradient(to right, #4d36e5, #6c1be0);
     font-size: 1rem;
   }
@@ -296,7 +289,7 @@ a {
 
 .services {
   background: rgb(249, 251, 254);
-  padding: var(--sectionPadding);
+  padding: $sectionPadding 0px;
   .services__card-container {
     @include flex(center, space-between, $gap: 1rem, $wrap: wrap);
     // single service card design
@@ -331,16 +324,16 @@ a {
         height: 100%;
       }
       &:hover .services__card-icon {
-        background-color: var(--whiteColor);
+        background-color: $whiteColor;
       }
       &:hover .services__card-title {
-        color: var(--whiteColor);
+        color: $whiteColor;
       }
       &:hover .services__card-desc {
-        color: var(--whiteColor);
+        color: $whiteColor;
       }
       &:hover .services__card-link {
-        color: var(--whiteColor);
+        color: $whiteColor;
       }
       .services__card-icon {
         @include flex(center, center);
@@ -349,7 +342,7 @@ a {
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        font-size: var(--largeFontSize);
+        font-size: $largeFontSize;
         margin: 0 auto 1.2rem auto;
         transition: all ease 0.5s;
       }
@@ -365,7 +358,7 @@ a {
         font-size: 1rem;
         line-height: 2rem;
         margin-bottom: 1.8rem;
-        color: var(--textColor);
+        color: $textColor;
         transition: all ease 0.5s;
       }
       .services__card-link {
@@ -377,7 +370,7 @@ a {
         transition: all ease 0.5s;
         font-size: 1.2rem;
         font-weight: 600;
-        color: var(--primaryColor);
+        color: $primaryColor;
       }
       &:nth-child(2) {
         &::before {
@@ -387,7 +380,7 @@ a {
           background-color: rgba(0, 0, 255, 0.295);
         }
         &:hover .services__card-icon {
-          background-color: var(--whiteColor);
+          background-color: $whiteColor;
         }
       }
       &:nth-child(3) {
@@ -398,7 +391,7 @@ a {
           background-color: rgba(0, 195, 255, 0.295);
         }
         &:hover .services__card-icon {
-          background-color: var(--whiteColor);
+          background-color: $whiteColor;
         }
       }
       &:nth-child(4) {
@@ -409,7 +402,7 @@ a {
           background-color: rgba(255, 191, 72, 0.295);
         }
         &:hover .services__card-icon {
-          background-color: var(--whiteColor);
+          background-color: $whiteColor;
         }
       }
     }
@@ -418,7 +411,7 @@ a {
 
 /* ======================== TEAM SECTION CSS STYLE ======================== */
 .team {
-  padding: var(--sectionPadding);
+  padding: $sectionPadding 0px;
   .team__wrapper {
     @include flex(
       $alignItems: center,
@@ -448,7 +441,7 @@ a {
         position: absolute;
         width: 100%;
         height: 84%;
-        background: var(--primaryColor);
+        background: $primaryColor;
         top: 0;
         right: 0;
         border-radius: 5px;
@@ -466,7 +459,7 @@ a {
               width: 45px;
               height: 45px;
               margin: 10px;
-              background: var(--whiteColor);
+              background: $whiteColor;
               border-radius: 50%;
               color: #111;
               transition: all ease-in-out 0.3s;
@@ -474,7 +467,7 @@ a {
               font-size: 1.4rem;
             }
             &:hover a {
-              color: var(--whiteColor);
+              color: $whiteColor;
               background: blueviolet;
             }
           }
@@ -520,20 +513,20 @@ a {
 }
 /* ======================== PORTFOLIO SECTION CSS STYLE ======================== */
 .portfolio {
-  padding: var(--sectionPadding) 0px;
+  padding: $sectionPadding 0px;
   @include responsiveByBreakPoint(phone) {
-    padding: var(--sectionPadding) 1rem;
+    padding: $sectionPadding 1rem;
   }
   .portfolio__titlebar {
-    background: var(--primaryColor);
+    background: $primaryColor;
     padding: 120px 0 280px 0;
     text-align: center;
     .portfolio__titlebar-text {
-      font-size: var(--largeFontSize);
+      font-size: $largeFontSize;
       font-weight: 700;
       line-height: 3.15rem;
       margin: 7px 0px;
-      color: var(--whiteColor);
+      color: $whiteColor;
       text-transform: uppercase;
       letter-spacing: 2px;
     }
@@ -542,7 +535,7 @@ a {
       font-size: 1rem;
       font-weight: 400;
       line-height: 2rem;
-      color: var(--whiteColor);
+      color: $whiteColor;
       width: 100%;
       @include responsiveByBreakPoint(tablet) {
         width: 50%;
@@ -550,8 +543,9 @@ a {
     }
   }
 }
+// portfolio image gallary design
 .portfolio__container {
-  padding-bottom: var(--sectionPadding);
+  padding-bottom: $sectionPadding;
   .portfolio__gallary {
     margin-top: -20rem;
     @include grid($columns: repeat(1, 1fr), $gap: 1.4rem);
@@ -564,21 +558,82 @@ a {
       @include grid($columns: repeat(4, 1fr), $gap: 1.4rem);
     }
 
-    .portfolio__img {
+    .portfolio__img-wrap {
+      position: relative;
       height: 100%;
       width: 100%;
-      border-radius: 5px;
-      position: relative;
+      cursor: pointer;
+
       &::before {
         content: "";
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        height: calc(100% - 20px);
+        width: calc(100% - 20px);
+        border-radius: 4px;
         position: absolute;
-        height: 120%;
-        width: 120%;
-        border: 5px solid violet;
-        background: var(--whiteColor);
+        z-index: 2;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-in;
+      }
+      &::after {
+        content: "";
+        background-color: #412cf7;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
         top: 0;
         left: 0;
+        right: 0;
+        bottom: 0;
         opacity: 1;
+        visibility: hidden;
+        border-radius: 4px;
+        transform: scale(0.9);
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover::before {
+        opacity: 1;
+        visibility: visible;
+      }
+      &:hover::after {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        transition: all 0.5s ease-in-out;
+        transition-delay: 0.3s;
+      }
+      .portfolio__img {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+      }
+      .portfolio__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        text-align: center;
+        visibility: hidden;
+        z-index: 3;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        h2 {
+          white-space: nowrap;
+          font-size: $mediumFontSize;
+        }
+        svg {
+          font-size: 2rem;
+          color: #412cf7;
+        }
+      }
+      &:hover .portfolio__content {
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
@@ -586,9 +641,155 @@ a {
   .portfolio__btn {
     @extend .btn;
     @include flex(center, space-between, $gap: 5px);
-    color: var(--whiteColor);
+    color: $whiteColor;
     background: linear-gradient(to right, #4d36e5, #6c1be0);
     font-size: 1rem;
     margin: 3rem auto 0px auto;
+  }
+}
+
+/* ======================== TESTIMONIAL SECTION CSS STYLE ======================== */
+.testimonial {
+  padding: $sectionPadding 0px;
+  .testimonial__container {
+    position: relative;
+    .testimonial__slider-container {
+      .testimonial__slider {
+        background: #f9f8ff;
+        padding: 3.75rem 2.5rem 1.875rem;
+        border-radius: 5px;
+        .testimonial__slider-content {
+          position: relative;
+          @include flex($alignItems: center, $justifyContent: space-between);
+          margin-bottom: 1.5rem;
+          .testimonial__slider-user {
+            @include flex($alignItems: center, $gap: 0.7rem);
+            h2 {
+              font-size: $mediumFontSize;
+              color: $titleColor;
+            }
+            p {
+              color: $textColor;
+            }
+          }
+          .testimonial__slider-star {
+            @include flex($alignItems: center, $gap: 5px);
+            color: orange;
+          }
+        }
+        .testimonial__slider-review {
+          color: $textColor;
+          line-height: 2rem;
+        }
+      }
+    }
+    .testimonial__btn {
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      top: 40%;
+      transition: all ease-in 0.2s;
+      @include flex($alignItems: center, $justifyContent: space-between);
+      .testimonial__prev-btn,
+      .testimonial__next-btn {
+        @include flex($alignItems: center, $justifyContent: center);
+        height: 50px;
+        cursor: pointer;
+        width: 50px;
+        color: $textColor;
+        border-radius: 50%;
+        background: rgb(234, 238, 242);
+        border: 1px solid rgb(217, 217, 217);
+        transition: all ease-in 0.2s;
+
+        &:hover {
+          background-color: $primaryColor;
+          color: $whiteColor;
+        }
+      }
+    }
+    &:hover .testimonial__btn,
+    .testimonial__prev-btn {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+}
+/* ======================== CONTACT-US SECTION CSS STYLE ======================== */
+
+.contact-us {
+  background: rgb(248, 248, 255);
+  padding: $sectionPadding 0px;
+}
+
+.contact-us__container {
+  .contact-us__content {
+    @include flex(
+      $alignItems: center,
+      $justifyContent: space-between,
+      $gap: 1.4rem
+    );
+
+    @include responsiveByBreakPoint(phone) {
+      @include flex($direction: column);
+    }
+    .contact-us__form {
+      width: 55%;
+      @include responsiveByBreakPoint(phone) {
+        width: 100%;
+        order: 2;
+      }
+      @include flex(
+        $alignItems: center,
+        $justifyContent: space-between,
+        $gap: 1rem,
+        $direction: column
+      );
+      .contact-us__name {
+        width: 100%;
+        @include flex(
+          $alignItems: center,
+          $justifyContent: space-between,
+          $gap: 0.4rem
+        );
+        @include responsiveByBreakPoint(phone) {
+          @include flex(
+            $alignItems: center,
+            $justifyContent: space-between,
+            $gap: 1rem,
+            $direction: column
+          );
+        }
+      }
+      input,
+      textarea {
+        width: 100%;
+        background: #fff;
+        border-radius: 4px;
+        border: 1px solid #ced4da;
+        outline: none;
+        padding: 0.75rem;
+        font-size: $baseFontSize;
+        color: $textColor;
+      }
+      .contact-us__submit-btn {
+        @extend .btn;
+        background: linear-gradient(to right, #4d36e5, #6c1be0);
+        font-size: 0.8rem;
+        color: $whiteColor;
+        transition: all ease-in-out 0.2s;
+        &:hover {
+          background: linear-gradient(to right #6c1be0, #4d36e5);
+        }
+      }
+    }
+    .contact-us__image {
+      @include responsiveByBreakPoint(phone) {
+        order: 1;
+      }
+      img {
+        width: 100%;
+      }
+    }
   }
 }

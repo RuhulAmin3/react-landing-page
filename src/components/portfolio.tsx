@@ -1,6 +1,7 @@
-import portfolioImg from "../assets/images/02_Portfolio-520x562.jpg";
 import Button from "./ui/Button";
 import { BiRightArrow } from "react-icons/bi";
+import PortfolioItem from "./ui/PortfolioItem";
+import { portfolioContent } from "../constant";
 const Portfolio = () => {
   return (
     <>
@@ -17,28 +18,10 @@ const Portfolio = () => {
       </section>
       <div className="container portfolio__container">
         <div className="portfolio__gallary">
-          <img
-            className="portfolio__img"
-            src={portfolioImg}
-            alt="portfolio-image"
-          />
-          <img
-            className="portfolio__img"
-            src={portfolioImg}
-            alt="portfolio-image"
-          />
-          <img
-            className="portfolio__img"
-            src={portfolioImg}
-            alt="portfolio-image"
-          />
-          <img
-            className="portfolio__img"
-            src={portfolioImg}
-            alt="portfolio-image"
-          />
+          {portfolioContent.map((content, idx) => (
+            <PortfolioItem content={content} key={idx} />
+          ))}
         </div>
-        <div className="portfolio__overlay"></div>
         <Button className="portfolio__btn">
           View More <BiRightArrow />{" "}
         </Button>

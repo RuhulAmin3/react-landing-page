@@ -3,7 +3,9 @@ import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import Team from "../components/Team";
-import Portfolio from "../components/portfolio";
+import Testimonial from "../components/Testimonial";
+import Portfolio from "../components/Portfolio";
+import ContactUs from "../components/ContactUs";
 
 const Home = () => {
   return (
@@ -14,6 +16,8 @@ const Home = () => {
       <Services />
       <Team />
       <Portfolio />
+      <Testimonial />
+      <ContactUs />
     </>
   );
 };
