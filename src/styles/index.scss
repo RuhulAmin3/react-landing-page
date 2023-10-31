@@ -1,4 +1,4 @@
-@import "./styles/mixin";
+@import "./mixin";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap");
 
 * {
@@ -146,7 +146,7 @@ a {
   @include flex($direction: column, $gap: 0.8rem);
   background: $primaryColor;
   padding-block: 15px;
-  top: 72px;
+  top: 52px;
   left: 0px;
   text-align: left;
   align-items: flex-start;
@@ -225,7 +225,6 @@ a {
 .hero-area {
   background: linear-gradient(to right, #4d36e5, #6c1be0);
   color: $whiteColor;
-  height: 80vh;
   padding: 6rem 1rem 0px;
   @include responsiveByBreakPoint(phone) {
     min-height: 100vh;
