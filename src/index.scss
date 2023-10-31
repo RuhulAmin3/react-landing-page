@@ -163,7 +163,8 @@ a {
 .hero-area {
   background: linear-gradient(to right, #4d36e5, #6c1be0);
   color: $whiteColor;
-  height: 80vh;
+  height: 70vh;
+  padding: 0 1rem;
   @include responsiveByBreakPoint(phone) {
     min-height: 100vh;
     height: 100%;
