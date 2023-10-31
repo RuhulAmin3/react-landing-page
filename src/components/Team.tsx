@@ -4,7 +4,7 @@ import Titlebar from "./ui/Titlebar";
 
 const Team = () => {
   return (
-    <section className="team">
+    <section className="team" id="team">
       <div className="container team__container">
         <Titlebar title="Dedicated Team" text="Our Best">
           Lorem Ipsum is simply dummy text of the printing and typesetting has

@@ -2,7 +2,7 @@ import heroImg from "../assets/images/illustration1.png";
 import Button from "./ui/Button";
 const HeroSection = () => {
   return (
-    <section className="container-full hero-area">
+    <section className="container-full hero-area" id="home">
       <div className="container hero-area__container">
         <div className="hero-area__content">
           <p className="hero-area__text">IT Design & Consulting</p>

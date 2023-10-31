@@ -3,7 +3,7 @@ import Button from "./ui/Button";
 import { BiRightArrow } from "react-icons/bi";
 const AboutUs = () => {
   return (
-    <section className="about-us">
+    <section className="about-us" id="about-us">
       <div className="container about-us__container">
         <div className="about-us__img">
           <img src={aboutUsImg} alt="about-us-image" />

@@ -3,7 +3,7 @@ import Titlebar from "./ui/Titlebar";
 import contactUsImg from "../assets/images/contact-us.png";
 const ContactUs = () => {
   return (
-    <section className="contact-us">
+    <section className="contact-us" id="contact-us">
       <div className="container contact-us__container">
         <Titlebar text="Contact us" title="How May We Help You!">
           Grursus mal suada faci lisis Lorem ipsum consectetur elit. Grursus mal

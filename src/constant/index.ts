@@ -8,6 +8,13 @@ import teamImg1 from "../assets/images/team1.jpg";
 import teamImg2 from "../assets/images/team3.jpg";
 import teamImg4 from "../assets/images/team4.jpg";
 import teamImg5 from "../assets/images/team5.jpg";
+
+// service content Icon
+
+import { FaLayerGroup, FaFilter } from "react-icons/fa";
+import { GiChart } from "react-icons/gi";
+import { BsFillVolumeUpFill } from "react-icons/Bs";
+
 export const sliderContent = [
   {
     id: 1,
@@ -82,11 +89,38 @@ export const teamContent = [
 ];
 
 export const navbarContent = [
-  { link: "#", text: "Home" },
-  { link: "#", text: "About Us" },
-  { link: "#", text: "Services" },
-  { link: "#", text: "Team" },
-  { link: "#", text: "Portfolio" },
-  { link: "#", text: "Testimonial" },
-  { link: "#", text: "Contact Us" },
+  { link: "#home", text: "Home" },
+  { link: "#about-us", text: "About Us" },
+  { link: "#services", text: "Services" },
+  { link: "#team", text: "Team" },
+  { link: "#portfolio", text: "Portfolio" },
+  { link: "#testimonial", text: "Testimonial" },
+  { link: "#contact-us", text: "Contact Us" },
+];
+
+export const serviceContent = [
+  {
+    title: "Market Research",
+    desc: "Grursus mal suada faci ipsum to and the and dolarorit ametion consectetur elitto more bulum that odio",
+    icon: FaFilter,
+    color: "red",
+  },
+  {
+    title: "Creative Layout",
+    desc: "Grursus mal suada faci ipsum to and the and dolarorit ametion consectetur elitto more bulum that odio",
+    icon: FaLayerGroup,
+    color: "blue",
+  },
+  {
+    title: "Digital Marketing",
+    desc: "Grursus mal suada faci ipsum to and the and dolarorit ametion consectetur elitto more bulum that odio",
+    icon: BsFillVolumeUpFill,
+    color: "#00c3ff",
+  },
+  {
+    title: "SEO & Backlinks",
+    desc: "Grursus mal suada faci ipsum to and the and dolarorit ametion consectetur elitto more bulum that odio",
+    icon: GiChart,
+    color: "#ffc048",
+  },
 ];

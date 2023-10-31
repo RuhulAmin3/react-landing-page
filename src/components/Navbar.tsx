@@ -1,4 +1,5 @@
 import NavItem from "./ui/NavItem";
+import { HashLink as Link } from "react-router-hash-link";
 import logo from "../assets/images/logo2.png";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
@@ -23,9 +24,11 @@ const Navbar = () => {
     <header className="container-full header" id="header">
       <nav className="container">
         <div className="navbar">
-          <div className="navbar__logo">
-            <img src={logo} alt="logo" />
-          </div>
+          <Link to="#home">
+            <div className="navbar__logo">
+              <img src={logo} alt="logo" />
+            </div>
+          </Link>
           <ul
             className={`navbar__navbar-list ${
               open ? "navbar__mobile-nav" : ""

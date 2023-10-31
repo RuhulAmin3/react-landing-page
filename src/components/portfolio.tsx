@@ -5,7 +5,7 @@ import { portfolioContent } from "../constant";
 const Portfolio = () => {
   return (
     <>
-      <section className="portfolio">
+      <section className="portfolio" id="portfolio">
         <div className="portfolio__titlebar">
           <p className="portfolio__titlebar-text">Project Gallery</p>
           <p className="portfolio__titlebar-desc">

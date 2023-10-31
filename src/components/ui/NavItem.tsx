@@ -1,3 +1,5 @@
+import { HashLink as Link } from "react-router-hash-link";
+
 type NavItemProps = {
   link: string;
   text: string;
@@ -6,7 +8,12 @@ type NavItemProps = {
 const NavItem = ({ link, text }: NavItemProps) => {
   return (
     <li className="navbar__item">
-      <a href={link}>{text}</a>{" "}
+      <Link
+        to={link}
+        scroll={(el) => el.scrollIntoView({ behavior: "auto", block: "end" })}
+      >
+        {text}
+      </Link>{" "}
     </li>
   );
 };

@@ -7,7 +7,7 @@ import SliderBtn from "./ui/SliderBtn";
 
 const Testimonial = () => {
   return (
-    <section className="testimonial">
+    <section className="testimonial" id="testimonial">
       <div className="container testimonial__container">
         <Titlebar text="testimonial" title="Customers Feedback">
           Lorem Ipsum is simply dummy text of the printing and typesetting has
