@@ -12,10 +12,12 @@ const Portfolio = () => {
             Project Gallery
           </p>
           <p className={`${styles["portfolio__titlebar-desc"]}`}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
-            quos, voluptatem quidem suscipit nesciunt fuga deleniti eligendi
-            autem? Ipsa, atque ducimus voluptatum inventore odit molestias
-            soluta ut. Optio, maxime repudiandae!
+            A visual showcase of our successful ventures. Get a glimpse into our
+            expertise and the diverse range of projects we've delivered, from
+            web applications to mobile solutions. Browse through our Project
+            Gallery to see how we've transformed ideas into reality, each
+            project a testament to our commitment to quality, innovation, and
+            client satisfaction.
           </p>
         </div>
       </section>

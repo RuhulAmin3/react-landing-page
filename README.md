@@ -23,4 +23,4 @@ In this Landing page, I am using css preprocess sass for styling. All of the sec
 
 here is my landing-page full picture. you will get more flexible overview in live website link.
 
-![DigecoAgency](https://res.cloudinary.com/dwykyqzzk/image/upload/v1698815326/Digeco-Agency-Website_vreghf.png)
+![DigecoAgency](https://res.cloudinary.com/dwykyqzzk/image/upload/v1698823243/Digeco-Agency-Website_kflhui.png)

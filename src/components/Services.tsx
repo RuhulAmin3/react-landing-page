@@ -7,9 +7,11 @@ const Services = () => {
     <section className={`${styles["services"]}`} id="services">
       <div className={`${["container"]} ${styles["services__container"]}`}>
         <Titlebar text="Feature" title="Let’s Check Our Services">
-          Lorem Ipsum is simply dummy text of the printing and typesetting has{" "}
-          <br />
-          been the industrys standard dummy text ever since
+          Explore our comprehensive range of services designed to meet your
+          every need. We're here to elevate your business with top-notch
+          solutions. <br />
+          From web development to mobile apps, we've got you covered – it's time
+          to discover what we can do for you.
         </Titlebar>
         <div className={`${styles["services__card-container"]}`}>
           {serviceContent.map((content, idx) => (

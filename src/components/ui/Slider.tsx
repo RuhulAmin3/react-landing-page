@@ -5,6 +5,7 @@ type SliderType = {
   user: string;
   designation: string;
   star: number;
+  description: string;
 };
 
 type PropsType = {
@@ -31,9 +32,7 @@ const Slider = ({ slider }: PropsType) => {
         </div>
       </div>
       <p className={`${styles["testimonial__slider-review"]}`}>
-        Grursus mal suada faci lisis Lorem ipsum dolarorit more and dumm ametion
-        consectetur elit. Vesti at bulum nec odio aea the of dumm ipsumm ipsum
-        that dolocons rsus mal suada
+        {slider.description}
       </p>
     </div>
   );

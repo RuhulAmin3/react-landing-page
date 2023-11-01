@@ -9,8 +9,11 @@ const ContactUs = () => {
         className={`${styles["container"]} ${styles["contact-us__container"]}`}
       >
         <Titlebar text="Contact us" title="How May We Help You!">
-          Grursus mal suada faci lisis Lorem ipsum consectetur elit. Grursus mal
-          suada faci lisis Lorem ipsum consectetur elit.
+          How May We Help You! Our dedicated team is here to assist with your
+          inquiries and address your needs. Feel free to reach out to us for any
+          questions, <br /> collaborations, or inquiries. We're committed to
+          providing you with the support and solutions you require to achieve
+          your goals.
         </Titlebar>
         <div className={`${styles["contact-us__content"]}`}>
           <form className={`${styles["contact-us__form"]}`}>

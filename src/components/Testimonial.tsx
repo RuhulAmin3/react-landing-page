@@ -12,8 +12,11 @@ const Testimonial = () => {
         className={`${styles["testimonial__container"]} ${styles["container"]}`}
       >
         <Titlebar text="testimonial" title="Customers Feedback">
-          Lorem Ipsum is simply dummy text of the printing and typesetting has
-          been the <br /> industrys standard dummy text ever since
+          Hear from those who matter the most—our clients. Explore what our
+          satisfied customers have to say about their experiences working with
+          us. <br /> Our commitment to excellence is reflected in the
+          testimonials and reviews from clients who have seen their projects
+          come to life with our support.
         </Titlebar>
         <Swiper
           pagination={{

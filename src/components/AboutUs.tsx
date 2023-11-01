@@ -18,15 +18,20 @@ const AboutUs = () => {
             Get Started With Our Software Agency
           </h2>
           <p className={`${styles["about-us__desc"]}`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-            officia atque sit magnam deserunt alias, earum quisquam modi
-            perspiciatis sed! Ipsum, ex harum dolor repudiandae quaerat nisi
-            sequi facilis ipsam itaque, suscipit maiores quis saepe! <br />{" "}
+            At our software agency, we're more than just a team of developers;
+            we're your strategic partners in navigating the digital landscape.
+            Our mission is to empower your business by crafting innovative
+            software solutions that drive growth and deliver exceptional user
+            experiences. With a deep commitment to quality and innovation, we
+            take pride in turning your ideas into reality. We believe that every
+            project is an opportunity to create something remarkable. <br />{" "}
             <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus quaerat rem consequatur neque blanditiis non tempore
-            praesentium magni dolor harum modi, dolorem maiores? Aliquid
-            consectetur eos, maiores nemo labore voluptatem.
+            Our dedicated team of experts combines their technical prowess and
+            creativity to deliver tailor-made software solutions. We listen to
+            your needs, understand your vision, and then build custom software
+            that exceeds expectations. We're at the forefront of the latest
+            technologies, ensuring that your solutions are not only cutting-edge
+            but also scalable and adaptable for future growth.
           </p>
           <Button className={`${styles["about-us__btn"]}`}>
             Read More

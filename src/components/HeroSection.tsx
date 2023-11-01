@@ -19,9 +19,9 @@ const HeroSection = () => {
             Our Intelligent Technology Solutions And Services
           </h2>
           <p className={`${styles["hero-area__desc"]}`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-            possimus amet esse dolore commodi eos harum quidem earum corporis
-            rerum?
+            Unlock the power of innovation with our intelligent technology
+            solutions and services. We're here to elevate your business through
+            cutting-edge technology and expertise.
           </p>
           <div>
             <Button className={`${styles["hero-area__btn"]}`}>

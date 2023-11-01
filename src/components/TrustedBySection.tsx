@@ -9,9 +9,12 @@ const TrustedBySection = () => {
       <div
         className={`${styles["trusted-by__container"]} ${styles["container"]}`}
       >
-        <Titlebar text="Trusted By" title="Who Trust Us">
-          Grursus mal suada faci lisis Lorem ipsum consectetur elit. Grursus mal
-          suada faci lisis Lorem ipsum consectetur elit.
+        <Titlebar text="Trusted By" title="Trusted Partners">
+          Trusted by Those Who Believe in Our Excellence: We've earned the trust
+          of an extensive network of clients, partners track record of success
+          and the long-lasting relationships dedication to excellence and
+          innovation. Join our community of trust and experience the difference
+          for yourself
         </Titlebar>
         <div className={`${styles["trusted-by__content"]}`}>
           <img src={logo1} alt="logo" />

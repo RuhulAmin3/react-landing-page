@@ -7,9 +7,11 @@ const Team = () => {
     <section className={`${styles["team"]}`} id="team">
       <div className={`${styles["team__container"]} ${styles["container"]}`}>
         <Titlebar title="Dedicated Team" text="Our Best">
-          Lorem Ipsum is simply dummy text of the printing and typesetting has
-          been the <br />
-          industrys standard dummy text ever since
+          We offer a dedicated team of experts ready to be an extension of
+          yourongoing support, in-house workforce.
+          <br />
+          Whether you're embarking on a new project or need our dedicated
+          professionals are here to meet your specific needs.
         </Titlebar>
         <div className={`${styles["team__wrapper"]}`}>
           {teamContent.map((content, idx) => (

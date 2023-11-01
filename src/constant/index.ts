@@ -18,10 +18,10 @@ import { BsFillVolumeUpFill } from "react-icons/Bs";
 export const sliderContent = [
   {
     id: 1,
-    user: "Kate Kingston",
-    designation: "Web developer",
+    user: "Barner Wington",
+    designation: "MERN developer",
     description:
-      "Grursus mal suada faci lisis Lorem ipsum dolarorit more and dumm ametion consectetur elit. Vesti at bulum nec odio aea the of dumm ipsumm ipsum that dolocons rsus mal suada",
+      "Our journey with this team has been marked by their exceptional commitment to our success. Their dedication is reflected in the numerous positive reviews from clients who share our deep.",
     star: 5,
   },
   {
@@ -29,7 +29,7 @@ export const sliderContent = [
     user: "Kate Kingston",
     designation: "Web developer",
     description:
-      "Grursus mal suada faci lisis Lorem ipsum dolarorit more and dumm ametion consectetur elit. Vesti at bulum nec odio aea the of dumm ipsumm ipsum that dolocons rsus mal suada",
+      "From the very beginning, it was evident that we had made the right choice. The testimonials and reviews are not mere words; they embody a resolute.",
     star: 5,
   },
   {
@@ -37,7 +37,7 @@ export const sliderContent = [
     user: "Jhon Done",
     designation: "Backed developer",
     description:
-      "Grursus mal suada faci lisis Lorem ipsum dolarorit more and dumm ametion consectetur elit. Vesti at bulum nec odio aea the of dumm ipsumm ipsum that dolocons rsus mal suada",
+      "Their team has translated our vision into a breathtaking reality. The echo of positive customer feedback mirrors our own experience with their unwavering pursuit of excellence.",
     star: 5,
   },
   {
@@ -45,7 +45,15 @@ export const sliderContent = [
     user: "Kingon Own",
     designation: "Graphic developer",
     description:
-      "Grursus mal suada faci lisis Lorem ipsum dolarorit more and dumm ametion consectetur elit. Vesti at bulum nec odio aea the of dumm ipsumm ipsum that dolocons rsus mal suada",
+      "It's not just about their impressive skills; it's  truly sets them apart. The reviews are not mere endorsements; they are a living testament to their relentless pursuit of excellence",
+    star: 5,
+  },
+  {
+    id: 5,
+    user: " Amanda K",
+    designation: "Graphic developer",
+    description:
+      "Exceptional dedication and results! Our project's journey with this team has been remarkable, and their numerous positive reviews speak volumes about their commitment to excellence.",
     star: 5,
   },
 ];
@@ -101,25 +109,25 @@ export const navbarContent = [
 export const serviceContent = [
   {
     title: "Market Research",
-    desc: "Grursus mal suada faci ipsum to and the and dolarorit ametion consectetur elitto more bulum that odio",
+    desc: "Our market research service is the compass that guides your business decisions. We delve deep into market trends, consumer insights, and competition.",
     icon: FaFilter,
     color: "red",
   },
   {
     title: "Creative Layout",
-    desc: "Grursus mal suada faci ipsum to and the and dolarorit ametion consectetur elitto more bulum that odio",
+    desc: "Elevate your brand's visual appeal with our creative layout expertise. Our designs merge form and function to leave a lasting impact on your audience.",
     icon: FaLayerGroup,
     color: "blue",
   },
   {
     title: "Digital Marketing",
-    desc: "Grursus mal suada faci ipsum to and the and dolarorit ametion consectetur elitto more bulum that odio",
+    desc: "Unleash the full potential of your online presence with our digital marketing strategies. We create tailored campaigns ensuring your brand's success in the digital landscape",
     icon: BsFillVolumeUpFill,
     color: "#00c3ff",
   },
   {
     title: "SEO & Backlinks",
-    desc: "Grursus mal suada faci ipsum to and the and dolarorit ametion consectetur elitto more bulum that odio",
+    desc: "Boost your online visibility and authority with our SEO and backlink strategies. We optimize your website for search engines  ensuring your business climbs the rankings in your industry.",
     icon: GiChart,
     color: "#ffc048",
   },
