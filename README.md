@@ -2,8 +2,6 @@
 
 [DigecoAgency](https://digeco-landing-page.netlify.app/)
 
-![DigecoAgency](https://res.cloudinary.com/dwykyqzzk/image/upload/v1698815326/Digeco-Agency-Website_vreghf.png)
-
 #### Live link: https://digeco-landing-page.netlify.app/
 
 ### Overview
@@ -22,3 +20,5 @@ In this Landing page, I am using css preprocess sass for styling. All of the sec
 - Frontend library: React.js
 - Styling: Sass
 - package: Swiper.js
+
+![DigecoAgency](https://res.cloudinary.com/dwykyqzzk/image/upload/v1698815326/Digeco-Agency-Website_vreghf.png)
