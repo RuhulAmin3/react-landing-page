@@ -21,4 +21,4 @@ In this Landing page, I am using css preprocess sass for styling. All of the sec
 - Styling: Sass
 - package: Swiper.js
 
-![DigecoAgency](https://res.cloudinary.com/dwykyqzzk/image/upload/v1698815326/Digeco-Agency-Website_vreghf.png)
+<img src="https://res.cloudinary.com/dwykyqzzk/image/upload/v1698815326/Digeco-Agency-Website_vreghf.png" style="height:600px overflow-y:hid"/>
