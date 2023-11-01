@@ -1,0 +1,114 @@
+@import "./mixin";
+@import "./variable";
+@import "./index.scss";
+
+/* ======================== FOOTER SECTION CSS STYLE ======================== 
+*/
+
+.footer {
+  background: rgb(248, 248, 255);
+  padding: $sectionPadding 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: $mobileSectionPadding 0px;
+  }
+
+  .footer__content {
+    @include grid($columns: repeat(1, 1fr), $gap: 1rem);
+    margin: 0 auto;
+    @include responsiveByBreakPoint(tablet) {
+      @include grid($columns: repeat(2, 1fr), $gap: 1rem);
+    }
+    @include responsiveByBreakPoint(desktop) {
+      @include grid($columns: repeat(4, 1fr), $gap: 1rem);
+    }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 34px;
+      color: $titleColor;
+      margin-bottom: 25px;
+    }
+    .footer__social-link {
+      @include responsiveByBreakPoint(phone) {
+        text-align: center;
+      }
+      img {
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 20px;
+        font-size: 1rem;
+        line-height: 30px;
+        color: $textColor;
+      }
+      ul {
+        @include flex($alignItems: center, $gap: 2rem);
+        @include responsiveByBreakPoint(phone) {
+          @include flex($justifyContent: center);
+        }
+        li a {
+          color: $textColor;
+          font-size: 1.5rem;
+          transition: all ease-in-out 0.2s;
+          &:hover {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+    .footer__services,
+    .footer__important-link {
+      @include responsiveByBreakPoint(phone) {
+        text-align: center;
+      }
+      li {
+        margin-bottom: 1.4rem;
+        transition: all ease-in-out 0.2s;
+        a {
+          @include flex($alignItems: center, $gap: 0.5rem);
+          @include responsiveByBreakPoint(phone) {
+            @include flex($justifyContent: center);
+          }
+          color: $textColor;
+        }
+        &:hover a {
+          color: $primaryColor;
+        }
+      }
+    }
+    .footer__contact-info {
+      @include responsiveByBreakPoint(phone) {
+        text-align: center;
+      }
+      p {
+        margin-bottom: 20px;
+        font-size: 1rem;
+        line-height: 30px;
+        color: $textColor;
+      }
+      li {
+        @include flex($alignItems: center, $gap: 0.5rem);
+        @include responsiveByBreakPoint(phone) {
+          text-align: center;
+          @include flex($justifyContent: center);
+        }
+        margin-bottom: 1rem;
+        color: $textColor;
+        span {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}
+
+.footer__finish-line {
+  background-color: $whiteColor;
+  padding: 3rem 0;
+  color: $textColor;
+  text-align: center;
+  @include responsiveByBreakPoint(phone) {
+    padding-inline: 3rem;
+    line-height: 1.5rem;
+  }
+}

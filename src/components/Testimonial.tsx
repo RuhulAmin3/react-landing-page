@@ -4,11 +4,13 @@ import { sliderContent } from "../constant";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SliderBtn from "./ui/SliderBtn";
-
+import styles from "../styles/_testimonial.module.scss";
 const Testimonial = () => {
   return (
-    <section className="testimonial" id="testimonial">
-      <div className="container testimonial__container">
+    <section className={`${styles["testimonial"]}`} id="testimonial">
+      <div
+        className={`${styles["testimonial__container"]} ${styles["container"]}`}
+      >
         <Titlebar text="testimonial" title="Customers Feedback">
           Lorem Ipsum is simply dummy text of the printing and typesetting has
           been the <br /> industrys standard dummy text ever since
@@ -27,7 +29,7 @@ const Testimonial = () => {
               spaceBetween: 20,
             },
           }}
-          className="testimonial__slider-container"
+          className={`${styles["testimonial__slider-container"]}`}
         >
           {sliderContent.map((slider, sliderIdx) => (
             <SwiperSlide key={sliderIdx}>

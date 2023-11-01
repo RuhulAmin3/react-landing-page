@@ -1,0 +1,89 @@
+@import "./mixin";
+@import "./variable";
+@import "./index.scss";
+/* ======================== TESTIMONIAL SECTION CSS STYLE ======================== */
+
+.testimonial {
+  padding: $sectionPadding 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: $mobileSectionPadding 0px;
+  }
+  .testimonial__container {
+    position: relative;
+    .testimonial__slider-container {
+      .testimonial__slider {
+        background: #f9f8ff;
+        padding: 3.75rem 2.5rem 1.875rem;
+        border-radius: 5px;
+        .testimonial__slider-content {
+          position: relative;
+          @include flex($alignItems: center, $justifyContent: space-between);
+          @include responsiveByBreakPoint(phone) {
+            @include flex(
+              $alignItems: flex-start,
+              $justifyContent: space-between,
+              $direction: column,
+              $gap: 10px
+            );
+          }
+          margin-bottom: 1.5rem;
+          .testimonial__slider-user {
+            @include flex($alignItems: center, $gap: 0.7rem);
+            h2 {
+              font-size: $mediumFontSize;
+              color: $titleColor;
+            }
+            p {
+              color: $textColor;
+            }
+          }
+          .testimonial__slider-star {
+            @include flex($alignItems: center, $gap: 5px);
+            color: orange;
+            @include responsiveByBreakPoint(phone) {
+              margin-left: 5rem;
+            }
+          }
+        }
+        .testimonial__slider-review {
+          color: $textColor;
+          line-height: 2rem;
+        }
+
+        @include responsiveByBreakPoint(phone) {
+          padding: 1.75rem 1rem;
+        }
+      }
+    }
+    .testimonial__btn {
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      top: 40%;
+      transition: all ease-in 0.2s;
+      @include flex($alignItems: center, $justifyContent: space-between);
+      .testimonial__prev-btn,
+      .testimonial__next-btn {
+        @include flex($alignItems: center, $justifyContent: center);
+        height: 50px;
+        cursor: pointer;
+        width: 50px;
+        color: $textColor;
+        border-radius: 50%;
+        background: rgb(234, 238, 242);
+        border: 1px solid rgb(217, 217, 217);
+        transition: all ease-in 0.2s;
+
+        &:hover {
+          background-color: $primaryColor;
+          color: $whiteColor;
+        }
+      }
+    }
+    &:hover .testimonial__btn,
+    .testimonial__prev-btn {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+}

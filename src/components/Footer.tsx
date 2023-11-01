@@ -7,13 +7,16 @@ import {
   AiFillInstagram,
   AiFillLinkedin,
 } from "react-icons/ai";
+import styles from "../styles/_footer.module.scss";
 const Footer = () => {
   return (
     <>
-      <footer className="footer">
-        <div className="container footer__container">
-          <div className="footer__content">
-            <div className="footer__social-link">
+      <footer className={`${styles["footer"]}`}>
+        <div
+          className={`${styles["footer__container"]} ${styles["container"]}`}
+        >
+          <div className={`${styles["footer__content"]}`}>
+            <div className={`${styles["footer__social-link"]}`}>
               <img src={logo} alt="logo" />
               <p>
                 Grursus mal suada faci Lorem to the ipsum dolarorit more ametion
@@ -42,7 +45,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="footer__services">
+            <div className={`${styles["footer__services"]}`}>
               <h2>Our Services</h2>
               <ul>
                 <li>
@@ -72,7 +75,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="footer__important-link">
+            <div className={`${styles["footer__important-link"]}`}>
               <h2>Important Link</h2>
               <ul>
                 <li>
@@ -107,7 +110,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="footer__contact-info">
+            <div className={`${styles["footer__contact-info"]}`}>
               <h2>Contact Information</h2>
               <p>Grursus mal suada faci lisis Lorem to ipsum consectetur.</p>
               <ul>
@@ -136,7 +139,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div className="footer__finish-line">
+      <div className={`${styles["footer__finish-line"]}`}>
         <p>© 2023 digeco. All Rights Reserved by Md.Ruhul Amin</p>
       </div>
     </>

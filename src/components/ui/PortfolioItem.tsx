@@ -1,5 +1,5 @@
 import { FaPlus } from "react-icons/fa";
-
+import styles from "../../styles/_portfolio.module.scss";
 type ContentType = {
   image: string;
   title: string;
@@ -10,13 +10,13 @@ type PropsType = {
 };
 const PortfolioItem = ({ content }: PropsType) => {
   return (
-    <div className="portfolio__img-wrap">
+    <div className={`${styles["portfolio__img-wrap"]}`}>
       <img
-        className="portfolio__img"
+        className={`${styles["portfolio__img"]}`}
         src={content.image}
         alt="portfolio-image"
       />
-      <div className="portfolio__content">
+      <div className={`${styles["portfolio__content"]}`}>
         <FaPlus />
 
         <h2>{content.title}</h2>

@@ -1,17 +1,20 @@
 import Button from "./ui/Button";
 import Titlebar from "./ui/Titlebar";
 import contactUsImg from "../assets/images/contact-us.png";
+import styles from "../styles/_contactUs.module.scss";
 const ContactUs = () => {
   return (
-    <section className="contact-us" id="contact-us">
-      <div className="container contact-us__container">
+    <section className={`${styles["contact-us"]}`} id="contact-us">
+      <div
+        className={`${styles["container"]} ${styles["contact-us__container"]}`}
+      >
         <Titlebar text="Contact us" title="How May We Help You!">
           Grursus mal suada faci lisis Lorem ipsum consectetur elit. Grursus mal
           suada faci lisis Lorem ipsum consectetur elit.
         </Titlebar>
-        <div className="contact-us__content">
-          <form className="contact-us__form">
-            <div className="contact-us__name">
+        <div className={`${styles["contact-us__content"]}`}>
+          <form className={`${styles["contact-us__form"]}`}>
+            <div className={`${styles["contact-us__name"]}`}>
               <input type="text" placeholder="First Name" />
               <input type="text" placeholder="Last Name" />
             </div>
@@ -23,11 +26,14 @@ const ContactUs = () => {
               cols={30}
               rows={5}
             />
-            <Button className="contact-us__submit-btn" type="sumit">
+            <Button
+              className={`${styles["contact-us__submit-btn"]}`}
+              type="sumit"
+            >
               Submit Now
             </Button>
           </form>
-          <div className="contact-us__image">
+          <div className={`${styles["contact-us__image"]}`}>
             <img src={contactUsImg} alt="contact-us-image" />
           </div>
         </div>

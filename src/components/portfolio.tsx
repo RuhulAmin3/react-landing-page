@@ -2,13 +2,16 @@ import Button from "./ui/Button";
 import { BiRightArrow } from "react-icons/bi";
 import PortfolioItem from "./ui/PortfolioItem";
 import { portfolioContent } from "../constant";
+import styles from "../styles/_portfolio.module.scss";
 const Portfolio = () => {
   return (
     <>
-      <section className="portfolio" id="portfolio">
-        <div className="portfolio__titlebar">
-          <p className="portfolio__titlebar-text">Project Gallery</p>
-          <p className="portfolio__titlebar-desc">
+      <section className={`${styles["portfolio"]}`} id="portfolio">
+        <div className={`${styles["portfolio__titlebar"]}`}>
+          <p className={`${styles["portfolio__titlebar-text"]}`}>
+            Project Gallery
+          </p>
+          <p className={`${styles["portfolio__titlebar-desc"]}`}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
             quos, voluptatem quidem suscipit nesciunt fuga deleniti eligendi
             autem? Ipsa, atque ducimus voluptatum inventore odit molestias
@@ -16,13 +19,15 @@ const Portfolio = () => {
           </p>
         </div>
       </section>
-      <div className="container portfolio__container">
-        <div className="portfolio__gallary">
+      <div
+        className={`${styles["container"]} ${styles["portfolio__container"]}`}
+      >
+        <div className={`${styles["portfolio__gallary"]}`}>
           {portfolioContent.map((content, idx) => (
             <PortfolioItem content={content} key={idx} />
           ))}
         </div>
-        <Button className="portfolio__btn">
+        <Button className={`${styles["portfolio__btn"]}`}>
           View More <BiRightArrow />{" "}
         </Button>
       </div>

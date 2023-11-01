@@ -1,0 +1,113 @@
+@import "./mixin";
+@import "./variable";
+@import "./index.scss";
+
+/* ======================== TEAM SECTION CSS STYLE ======================== */
+.team {
+  padding: $sectionPadding 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: $mobileSectionPadding 0px;
+  }
+  .team__wrapper {
+    @include grid($columns: repeat(1, 1fr), $gap: 1rem);
+    @include responsiveByBreakPoint(tablet) {
+      @include grid($columns: repeat(2, 1fr), $gap: 1rem);
+    }
+    @include responsiveByBreakPoint(desktop) {
+      @include grid($columns: repeat(4, 1fr), $gap: 1rem);
+    }
+    .team__card {
+      position: relative;
+      // flex-basis: 100%;
+      // @include responsiveByBreakPoint(tablet) {
+      //   flex-basis: 45%;
+      // }
+      // @include responsiveByBreakPoint(desktop) {
+      //   flex-basis: 30%;
+      // }
+      img {
+        border-radius: 5px;
+        margin-bottom: 15px;
+        position: relative;
+        width: 100%;
+      }
+      .team__overlay {
+        position: absolute;
+        width: 100%;
+        height: 85%;
+        @include responsiveByBreakPoint(tablet) {
+          height: 85%;
+        }
+        @include responsiveByBreakPoint(desktop) {
+          height: 81%;
+        }
+        background: $primaryColor;
+        top: 0;
+        right: 0;
+        border-radius: 5px;
+        opacity: 0;
+        transition: all ease-in-out 0.5s;
+        ul {
+          @include flex($alignItems: center, $justifyContent: center);
+          height: 100%;
+          li {
+            list-style-type: none;
+            display: none;
+            transition: all ease-in-out 1s;
+            a {
+              @include flex($alignItems: center, $justifyContent: center);
+              width: 45px;
+              height: 45px;
+              margin: 10px;
+              background: $whiteColor;
+              border-radius: 50%;
+              color: #111;
+              transition: all ease-in-out 0.3s;
+              visibility: hidden;
+              font-size: 1.4rem;
+            }
+            &:hover a {
+              color: $whiteColor;
+              background: blueviolet;
+            }
+          }
+        }
+      }
+      .team__identity {
+        text-align: center;
+      }
+
+      // add hover effect in the team member section
+      &:hover .team__overlay {
+        opacity: 0.8;
+        ul li {
+          display: block;
+          // sass mixin to create animation keyframes
+          @include keyframes(movingIcon) {
+            0% {
+              transform: translateY(30px);
+            }
+            100% {
+              transform: translateY(0);
+            }
+          }
+          &:nth-child(1) {
+            @include animate(movingIcon, 1s, linear, 1, $animationDelay: 0.3s);
+          }
+          &:nth-child(2) {
+            @include animate(movingIcon, 1s, linear, 1, $animationDelay: 0.5s);
+          }
+          &:nth-child(3) {
+            @include animate(movingIcon, 1s, linear, 1, $animationDelay: 0.7s);
+          }
+          &:nth-child(4) {
+            @include animate(movingIcon, 1s, linear, 1, $animationDelay: 0.9s);
+          }
+          a {
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}

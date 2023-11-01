@@ -1,0 +1,44 @@
+@import "./mixin";
+@import "./variable";
+@import "./index.scss";
+
+/* ======================== TRUSTED-BY SECTION CSS STYLE ======================== */
+
+.trusted-by {
+  padding: $sectionPadding 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: $mobileSectionPadding 0px;
+  }
+  .trusted-by__container {
+    .trusted-by__content {
+      @include grid(
+        $columns: repeat(1, 1fr),
+        $alignItems: center,
+        $justifyContent: center,
+        $gap: 2.5rem
+      );
+      @include responsiveByBreakPoint(tablet) {
+        @include grid($columns: repeat(2, 1fr), $gap: 1rem);
+      }
+      @include responsiveByBreakPoint(desktop) {
+        @include grid($columns: repeat(4, 1fr), $gap: 1rem);
+      }
+      img {
+        filter: grayscale(1);
+        transition: all ease-in-out 0.2s;
+        width: 100%;
+        padding: 1rem;
+        cursor: pointer;
+        &:hover {
+          filter: grayscale(0);
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          border-radius: 5px;
+        }
+        @include responsiveByBreakPoint(phone) {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import styles from "../../styles/_titlebar.module.scss";
 type TitlebarProps = {
   text: string;
   title: string;
@@ -5,10 +6,10 @@ type TitlebarProps = {
 };
 const Titlebar = ({ text, title, children }: TitlebarProps) => {
   return (
-    <div className="titlebar">
-      <p className="titlebar__text">{text}</p>
-      <h2 className="titlebar__title">{title}</h2>
-      {children && <p className="titlebar__desc">{children}</p>}
+    <div className={`${styles["titlebar"]}`}>
+      <p className={`${styles["titlebar__text"]}`}>{text}</p>
+      <h2 className={`${styles["titlebar__title"]}`}>{title}</h2>
+      {children && <p className={`${styles["titlebar__desc"]}`}>{children}</p>}
     </div>
   );
 };

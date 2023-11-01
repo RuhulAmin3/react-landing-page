@@ -7,34 +7,38 @@ import Button from "./ui/Button";
 
 import { navbarContent } from "../constant";
 import { useState } from "react";
+import styles from "../styles/_navbar.module.scss";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   window.onscroll = () => {
-    const navbar = document.getElementById("header");
+    const navbar = document.getElementById(styles["header"]);
     if (window.scrollY > 50) {
       // add class
-      navbar?.classList.add("sticky");
+      navbar?.classList.add(styles["sticky"]);
     } else {
       // remove class
-      navbar?.classList.remove("sticky");
+      navbar?.classList.remove(styles["sticky"]);
     }
   };
   const handleToggle = () => {
     setOpen(!open);
   };
   return (
-    <header className="container-full header" id="header">
-      <nav className="container">
-        <div className="navbar">
+    <header
+      className={`${styles["container-full"]} ${styles["header"]}`}
+      id="header"
+    >
+      <nav className={`${styles["container"]}`}>
+        <div className={`${styles["navbar"]}`}>
           <Link to="#home">
-            <div className="navbar__logo">
+            <div className={`${styles["navbar__logo"]}`}>
               <img src={logo} alt="logo" />
             </div>
           </Link>
           <ul
-            className={`navbar__navbar-list ${
-              open ? "navbar__mobile-nav" : ""
+            className={`${styles["navbar__navbar-list"]} ${
+              open ? `${styles["navbar__mobile-nav"]}` : ""
             }`}
           >
             {navbarContent.map((content, idx) => (
@@ -46,13 +50,18 @@ const Navbar = () => {
               />
             ))}
           </ul>
-          <div className="navbar__search-tab">
-            <span className="navbar__search-icon">
+          <div className={`${styles["navbar__search-tab"]}`}>
+            <span className={`${styles["navbar__search-icon"]}`}>
               <BiSearchAlt2 />
             </span>
-            <Button className="navbar__quote-btn">Get a Quote</Button>
+            <Button className={`${styles["navbar__quote-btn"]}`}>
+              Get a Quote
+            </Button>
           </div>
-          <span className="navbar__hambarger" onClick={handleToggle}>
+          <span
+            className={`${styles["navbar__hambarger"]}`}
+            onClick={handleToggle}
+          >
             {open ? <RxCross1 /> : <RxHamburgerMenu />}
           </span>
         </div>

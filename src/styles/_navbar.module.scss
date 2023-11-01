@@ -1,0 +1,122 @@
+@import "./mixin";
+@import "./variable";
+@import "./index.scss";
+
+/* ======================== NAVBAR CSS STYLE ======================== */
+.header {
+  background: $primaryColor;
+  padding: 10px 0px;
+  top: 0;
+  position: fixed;
+  z-index: 9999;
+}
+
+.sticky {
+  background: $primaryColor;
+  color: $whiteColor;
+  margin-top: 0px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.navbar {
+  @include flex(center, space-between);
+  .navbar__logo {
+    @include responsiveByBreakPoint(phone) {
+      width: 40%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .navbar__hambarger {
+    font-size: 25px;
+    cursor: pointer;
+    display: block;
+    color: $whiteColor;
+
+    @include responsiveByBreakPoint(desktop) {
+      display: none;
+    }
+  }
+}
+
+.navbar__navbar-list {
+  visibility: hidden;
+  position: absolute;
+  @include flex($direction: column, $gap: 0.8rem);
+  background: $primaryColor;
+  padding-block: 15px;
+  top: 52px;
+  left: 0px;
+  text-align: left;
+  align-items: flex-start;
+  width: 100%;
+  font-size: 1rem;
+  @include responsiveByBreakPoint(tablet) {
+    top: 95px;
+  }
+  @include responsiveByBreakPoint(desktop) {
+    visibility: visible;
+    position: static;
+    @include flex(center, center, $gap: 0, $direction: row);
+  }
+  list-style-type: none;
+  .navbar__item {
+    padding: 0 1rem;
+    font-weight: 500;
+    a {
+      color: $whiteColor;
+      text-decoration: none;
+      position: relative;
+      width: fit-content;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 0;
+        background-color: $whiteColor;
+        bottom: -10px;
+        left: 0;
+        transition: all ease-in 0.2s;
+      }
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.navbar__mobile-nav {
+  @include responsiveByBreakPoint(phone) {
+    visibility: visible;
+  }
+
+  @include responsiveByBreakPoint(tablet) {
+    visibility: visible;
+  }
+}
+
+.navbar__search-tab {
+  display: none;
+  @include responsiveByBreakPoint(desktop) {
+    display: block;
+    @include flex(center, space-between, $gap: 10px);
+  }
+  color: $whiteColor;
+  .navbar__search-icon {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  .navbar__quote-btn {
+    @extend .btn;
+    white-space: nowrap;
+    background: transparent;
+    transition: all ease 0.3s;
+    color: $whiteColor;
+    border: 3px solid $whiteColor;
+    &:hover {
+      background-color: $whiteColor;
+      color: black;
+    }
+  }
+}

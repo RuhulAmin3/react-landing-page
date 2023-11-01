@@ -1,4 +1,6 @@
 import { FaFacebook } from "react-icons/fa";
+import styles from "../../styles/_team.module.scss";
+
 import {
   AiFillTwitterCircle,
   AiFillInstagram,
@@ -17,9 +19,9 @@ type PropsType = {
 
 const TeamCard = ({ content }: PropsType) => {
   return (
-    <div className="team__card">
+    <div className={`${styles["team__card"]}`}>
       <img src={content.image} alt="team member" />
-      <div className="team__overlay">
+      <div className={`${styles["team__overlay"]}`}>
         <ul>
           <li>
             <a href="#">
@@ -43,7 +45,7 @@ const TeamCard = ({ content }: PropsType) => {
           </li>
         </ul>
       </div>
-      <div className="team__identity">
+      <div className={`${styles["team__identity"]}`}>
         <h2>{content.name}</h2>
         <p>{content.designation}</p>
       </div>

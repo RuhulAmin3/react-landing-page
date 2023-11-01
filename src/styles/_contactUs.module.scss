@@ -1,0 +1,83 @@
+@import "../styles/mixin";
+@import "../styles/variable";
+@import "../styles/index.scss";
+/* ======================== CONTACT-US SECTION CSS STYLE ======================== */
+.contact-us {
+  background: rgb(248, 248, 255);
+  padding: $sectionPadding 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: $mobileSectionPadding 0px;
+  }
+}
+
+.contact-us__container {
+  .contact-us__content {
+    @include flex(
+      $alignItems: center,
+      $justifyContent: space-between,
+      $gap: 1.4rem
+    );
+
+    @include responsiveByBreakPoint(phone) {
+      @include flex($direction: column);
+    }
+    .contact-us__form {
+      width: 55%;
+      @include responsiveByBreakPoint(phone) {
+        width: 100%;
+        order: 2;
+      }
+      @include flex(
+        $alignItems: center,
+        $justifyContent: space-between,
+        $gap: 1rem,
+        $direction: column
+      );
+      .contact-us__name {
+        width: 100%;
+        @include flex(
+          $alignItems: center,
+          $justifyContent: space-between,
+          $gap: 0.4rem
+        );
+        @include responsiveByBreakPoint(phone) {
+          @include flex(
+            $alignItems: center,
+            $justifyContent: space-between,
+            $gap: 1rem,
+            $direction: column
+          );
+        }
+      }
+      input,
+      textarea {
+        width: 100%;
+        background: #fff;
+        border-radius: 4px;
+        border: 1px solid #ced4da;
+        outline: none;
+        padding: 0.75rem;
+        font-size: $baseFontSize;
+        color: $textColor;
+      }
+      .contact-us__submit-btn {
+        @extend .btn;
+        background: linear-gradient(to right, #4d36e5, #6c1be0);
+        font-size: 0.8rem;
+        color: $whiteColor;
+        transition: all ease-in-out 0.2s;
+        &:hover {
+          background: linear-gradient(to right #6c1be0, #4d36e5);
+        }
+      }
+    }
+    .contact-us__image {
+      @include responsiveByBreakPoint(phone) {
+        order: 1;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import "./mixin";
+@import "./variable";
+@import "./index.scss";
+/* ======================== FEATURE/SERVICES SECTION CSS STYLE ======================== */
+
+.services {
+  background: rgb(249, 251, 254);
+  padding: $sectionPadding 0px;
+  @include responsiveByBreakPoint(phone) {
+    padding: $mobileSectionPadding 0px;
+  }
+  .services__card-container {
+    @include grid($columns: repeat(1, 1fr), $gap: 1rem);
+
+    // single service card design
+    @include responsiveByBreakPoint(tablet) {
+      @include grid($columns: repeat(2, 1fr), $gap: 1rem);
+    }
+    @include responsiveByBreakPoint(desktop) {
+      @include grid($columns: repeat(4, 1fr), $gap: 1rem);
+    }
+    .services__card {
+      min-height: 400px;
+
+      text-align: center;
+      padding: 45px 35px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      border-radius: 5px;
+      position: relative;
+      z-index: 1;
+      &::before {
+        content: " ";
+        position: absolute;
+        width: 100%;
+        height: 0.8%;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 5px;
+        transition: all ease 0.5s;
+        background-color: red;
+      }
+      &:hover::before {
+        height: 100%;
+      }
+      &:hover .services__card-icon {
+        background-color: $whiteColor;
+      }
+      &:hover .services__card-title,
+      &:hover .services__card-desc,
+      &:hover .services__card-link {
+        color: $whiteColor;
+      }
+      .services__card-icon {
+        @include flex(center, center);
+        background: rgba(255, 0, 0, 0.295);
+        color: red;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        font-size: $largeFontSize;
+        margin: 0 auto 1.2rem auto;
+        transition: all ease 0.5s;
+      }
+      .services__card-title {
+        font-size: 1.3rem;
+        line-height: 34px;
+        color: #111;
+        letter-spacing: 0.6px;
+        margin-bottom: 10px;
+        transition: all ease 0.5s;
+      }
+      .services__card-desc {
+        font-size: 1rem;
+        line-height: 2rem;
+        margin-bottom: 1.8rem;
+        color: $textColor;
+        transition: all ease 0.5s;
+      }
+      .services__card-link {
+        @include flex(
+          $alignItems: center,
+          $justifyContent: center,
+          $gap: 0.4rem
+        );
+        transition: all ease 0.5s;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $primaryColor;
+      }
+      &:nth-child(2) {
+        &::before {
+          background-color: blue;
+        }
+        .services__card-icon {
+          background-color: rgba(0, 0, 255, 0.295);
+        }
+        &:hover .services__card-icon {
+          background-color: $whiteColor;
+        }
+      }
+      &:nth-child(3) {
+        &::before {
+          background-color: #00c3ff;
+        }
+        .services__card-icon {
+          background-color: rgba(0, 195, 255, 0.295);
+        }
+        &:hover .services__card-icon {
+          background-color: $whiteColor;
+        }
+      }
+      &:nth-child(4) {
+        &::before {
+          background-color: #ffc048;
+        }
+        .services__card-icon {
+          background-color: rgba(255, 191, 72, 0.295);
+        }
+        &:hover .services__card-icon {
+          background-color: $whiteColor;
+        }
+      }
+    }
+  }
+}
