@@ -2,6 +2,8 @@
 
 [DigecoAgency](https://digeco-landing-page.netlify.app/)
 
+![DigecoAgency](https://res.cloudinary.com/dwykyqzzk/image/upload/v1698815326/Digeco-Agency-Website_vreghf.png)
+
 #### Live link: https://digeco-landing-page.netlify.app/
 
 ### Overview
