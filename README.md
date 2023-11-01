@@ -3,6 +3,8 @@
 [DigecoAgency](https://digeco-landing-page.netlify.app/)
 (https://ibb.co/LPsQBK9/)
 
+#### Live link: https://digeco-landing-page.netlify.app/
+
 ### Overview
 
 In this Landing page, I am using css preprocess sass for styling. All of the section is responsive in mobile and desktop devices as well as tablet. this landing page decorated with css animation and testimonial section is decorated by slider. I'm try to give meaningful class name of html element by following css class name BEM convention.
